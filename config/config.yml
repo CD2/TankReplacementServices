@@ -1,0 +1,8 @@
+development:
+  enquiries_to: 'web@cd2solutions.co.uk'
+
+test:
+  enquiries_to: 'web@cd2solutions.co.uk'
+
+production:
+  enquiries_to: 'web@cd2solutions.co.uk'

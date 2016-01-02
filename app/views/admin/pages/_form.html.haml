@@ -1,0 +1,13 @@
+= form_for([:admin, @page]) do |f|
+
+  .field
+    = f.label :name
+    = f.text_field :name 
+  .field
+    = f.label :path
+    = f.text_field :path
+  .field
+    = f.label :body
+    = f.text_area :body
+  .field
+    = f.submit 'Save'

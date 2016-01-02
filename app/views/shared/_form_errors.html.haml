@@ -1,0 +1,8 @@
+- if object.errors.any?
+	.errors_container
+		.error_number
+			there were 
+			= pluralize object.errors.count, 'error'
+		- object.errors.full_messages.each do |msg|
+			.error
+				= msg

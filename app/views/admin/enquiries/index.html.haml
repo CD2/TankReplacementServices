@@ -1,0 +1,22 @@
+%h1 Enquiries
+
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+        Email
+      %th{'colspan' => 2}
+  %tbody
+    - @enquiries.each do |enquiry|
+      %tr
+        %td
+          = enquiry.name
+        %td
+          = enquiry.email
+        %td
+          = link_to 'view', [:admin, enquiry]
+        %td= link_to 'delete', [:admin, enquiry], method: :delete, data: { confirm: "Are you sure?" }
+        
+          

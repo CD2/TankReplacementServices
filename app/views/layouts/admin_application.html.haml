@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Simple
+    = stylesheet_link_tag    'admin_application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+
+    #admin_page_wrapper
+
+      = render 'shared/admin_sidebar'
+
+      #admin_page
+        = render 'shared/admin_top_menu'
+
+        #admin_content_wrapper
+          = yield

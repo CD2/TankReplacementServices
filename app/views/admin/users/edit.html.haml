@@ -1,0 +1,11 @@
+= render 'shared/form_errors', object: @user
+
+= form_for([:admin, @user]) do |f|
+  .field
+    = f.label :name
+    = f.text_field :name 
+  .field
+    = f.label :email
+    = f.email_field :email
+  .field
+    = f.submit 'Save'

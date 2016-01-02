@@ -1,0 +1,22 @@
+= link_to 'Create New Testimonials', [:new, :admin, :testimonial], class: 'action_link'
+%h1 Testimonials
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Body
+      %th{'colspan' => 2}
+  %tbody
+    - @testimonials.each do |testimonial|
+      %tr
+        %td
+          = testimonial.name
+        %td
+          = testimonial.body
+        %td
+          = link_to 'edit', [:edit, :admin, testimonial]
+        %td
+          = link_to 'delete', [:admin, testimonial], method: 'delete', confirm: 'Are you sure?'

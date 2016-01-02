@@ -1,0 +1,18 @@
+= link_to 'Create New Service', [:new, :admin, :service], class: 'action_link'
+%h1 Services
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th{'colspan' => 2}
+  %tbody
+    - @services.each do |service|
+      %tr
+        %td
+          = service.name
+        %td
+          = link_to 'edit', [:edit, :admin, service]
+        %td
+          = link_to 'delete', [:admin, service], method: 'delete', confirm: 'Are you sure?'

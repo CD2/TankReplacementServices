@@ -1,0 +1,22 @@
+= link_to 'Create New User', [:new, :admin, :user], class: 'action_link'
+%h1 Users
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Email
+      %th{'colspan' => 2}
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td
+          = user.name
+        %td
+          = user.email
+        %td
+          = link_to 'edit', [:edit, :admin, user]
+        %td
+          = link_to 'delete', [:admin, user], method: 'delete', confirm: 'Are you sure?' if user != current_user

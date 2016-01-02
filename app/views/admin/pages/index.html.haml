@@ -1,0 +1,23 @@
+= link_to 'Create New Page', [:new, :admin, :page], class: 'action_link'
+%h1 Pages
+
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Path
+      %th{'colspan' => 2}
+  %tbody
+    - @pages.each do |page|
+      %tr
+        %td
+          = page.name
+        %td
+          = page.path
+        %td
+          = link_to 'edit', [:edit, :admin, page]
+        %td
+          = link_to 'delete', [:admin, page], method: 'delete', confirm: 'Are you sure?'

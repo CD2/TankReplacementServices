@@ -1,0 +1,10 @@
+%table
+  %thead
+    %tr
+      %th
+        Name
+  %tbody
+    - @services.each do |service|
+      %tr
+        %td
+          = link_to service.name, service

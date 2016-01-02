@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+service_one:
+  name: Service One
+  body: MyText
+
+service_two:
+  name: Service Two
+  body: MyText

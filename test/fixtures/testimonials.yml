@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+testimonial_one:
+  name: Testimonial One
+  body: MyText
+
+testimonial_two:
+  name: Testimonial Two
+  body: MyText
