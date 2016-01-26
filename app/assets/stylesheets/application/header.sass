@@ -1,0 +1,76 @@
+span.menu_spacer:before
+	content: '|'
+	
+#header_container
+
+	#top_nav
+		padding: 10px 15px
+		+flexbox
+		+justify-content(space-around)
+
+	#header_content
+		padding: 10px 15px
+		
+		img
+			height: 150px
+
+		#header_content_left
+
+			>*
+				display: inline-block
+				vertical-align: middle
+
+			#phone_numbers
+				color: $primary_color
+				font-size: 1.375em
+
+				>div
+					margin: 10px
+					line-height: 1.25em
+
+				#phone_number
+					font-weight: bold
+		#header_content_right
+			float: right
+
+			p
+				width: 196px
+				text-align: right
+				color: $light_primary_color
+				line-height: 30px
+
+			>*
+				vertical-align: top
+				display: inline-block
+
+	#main_menu
+		+flexbox
+		+justify-content(space-around)
+		background: $primary_color
+		color: white
+		padding: 10px 20px
+
+
+
+		.dropdown 
+
+			&:after
+				content: '\25BC'
+
+			&:hover div
+				max-height: 100px
+				padding: 10px
+			
+			div
+				max-height: 0
+				position: absolute
+				background: $primary_color
+				padding: 0 10px
+				overflow: hidden
+				margin-left: -10px
+				transition: 0.3s linear
+				line-height: 2em
+
+				span
+					display: block
+

@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160101230018) do
   create_table "services", force: :cascade do |t|
     t.string   "name"
     t.text     "body"
+    t.string   "banner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

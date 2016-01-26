@@ -3,6 +3,8 @@ class CreateServices < ActiveRecord::Migration
     create_table :services do |t|
       t.string :name
       t.text :body
+      t.string :banner
+
 
       t.timestamps null: false
     end
