@@ -1,3 +1,7 @@
-%h1= @service.name
-%hr
-%p= @service.body
+- provide :title, @service.name
+#service_page_container
+	#service_content
+		= raw @service.body
+
+
+	= render 'shared/promotions'
