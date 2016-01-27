@@ -1,0 +1,18 @@
+- provide :title, 'Menus'
+%h1 Menus
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Path
+      %th{'colspan' => 2}
+  %tbody
+    - @menus.each do |menu|
+      %tr
+        %td
+          = menu.name
+        %td
+          = link_to 'edit', [:edit, :admin, menu]

@@ -1,0 +1,14 @@
+= form_for([:admin, @menu]) do |menu_form|
+  
+  = menu_form.fields_for :menu_item do |menu_item_fields|
+    .field
+      = menu_item_fields.label :path
+      = menu_item_fields.text_field :path
+    .field
+      = menu_item_fields.label :name
+      = menu_item_fields.text_field :name
+    .field
+      = menu_item_fields.label :weight
+      = menu_item_fields.text_field :weight
+  .field
+    = menu_form.submit 'Save'

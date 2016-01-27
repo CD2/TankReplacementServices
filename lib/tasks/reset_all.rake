@@ -5,5 +5,6 @@ task :reset_all do
 	Rake::Task['db:migrate'].invoke
 	Rake::Task['gen_users'].invoke
 	Rake::Task['gen_services'].invoke
+	Rake::Task['gen_menus'].invoke
 	
 end
