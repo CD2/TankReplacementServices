@@ -9,6 +9,7 @@ task :gen_menus do
 	admin_top_menu.menu_item.create!(name: 'Logout', path: '/logout', weight: 3)
 
 	admin_side_menu.menu_item.create!(name: 'Services', path: '/admin/services', weight: 1)
+	admin_side_menu.menu_item.create!(name: 'FAQs', path: '/admin/faqs', weight: 1)
 	admin_side_menu.menu_item.create!(name: 'Pages', path: '/admin/pages', weight: 3)
 	admin_side_menu.menu_item.create!(name: 'Users', path: '/admin/users', weight: 5)
 	admin_side_menu.menu_item.create!(name: 'Enquiries', path: '/admin/enquiries', weight: 6)

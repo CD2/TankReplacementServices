@@ -1,0 +1,9 @@
+- provide :title, 'FAQs'
+#faq_page_container
+	
+	%h1 FAQs
+
+	- @faqs.each do |faq|
+		.question_container
+			.question= faq.question
+			.answer= raw faq.answer

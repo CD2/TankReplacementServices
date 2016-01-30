@@ -1,0 +1,10 @@
+= form_for([:admin, @faq]) do |f|
+
+  .field
+    = f.label :question
+    = f.text_field :question 
+  .field
+    = f.label :answer
+    = f.text_area :answer, class: 'editable'
+  .field
+    = f.submit 'Save'

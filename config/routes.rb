@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'contact_us/thanks' => 'enquiries#thanks'
   
   get 'about' => 'pages#about'
+  get 'faq' => 'pages#faq'
 
   resources :services, only: [:index, :show]
   resources :testimonials, only: [:index]
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
     root 'projects#index'
 
     resources :services, except: [:show]
+    resources :faqs, except: [:show]
     resources :testimonials, except: [:show]
     resources :pages, except: [:show]
     resources :projects, except: [:show]

@@ -1,0 +1,20 @@
+- provide :title, 'Faq'
+= link_to 'Create New Faq', [:new, :admin, :faq], class: 'action_link'
+%h1 Faq
+
+
+%table
+  %thead
+    %tr
+      %th
+        Question
+      %th{'colspan' => 2}
+  %tbody
+    - @faqs.each do |faq|
+      %tr
+        %td
+          = truncate(faq.question, length: 100, separator: ' ')
+        %td
+          = link_to 'edit', [:edit, :admin, faq]
+        %td
+          = link_to 'delete', [:admin, faq], method: 'delete', confirm: 'Are you sure?'
