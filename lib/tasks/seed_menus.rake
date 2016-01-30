@@ -11,6 +11,7 @@ task :gen_menus do
 	admin_side_menu.menu_item.create!(name: 'Services', path: '/admin/services', weight: 1)
 	admin_side_menu.menu_item.create!(name: 'FAQs', path: '/admin/faqs', weight: 1)
 	admin_side_menu.menu_item.create!(name: 'Pages', path: '/admin/pages', weight: 3)
+	admin_side_menu.menu_item.create!(name: 'Promition Cards', path: '/admin/promotion_cards', weight: 5)
 	admin_side_menu.menu_item.create!(name: 'Users', path: '/admin/users', weight: 5)
 	admin_side_menu.menu_item.create!(name: 'Enquiries', path: '/admin/enquiries', weight: 6)
 	admin_side_menu.menu_item.create!(name: 'Menus', path: '/admin/menus', weight: 7)

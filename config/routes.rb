@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     resources :services, except: [:show]
     resources :faqs, except: [:show]
     resources :testimonials, except: [:show]
+    resources :promotion_cards, except: [:show]
     resources :pages, except: [:show]
     resources :projects, except: [:show]
     resources :enquiries, only: [:index, :show, :destroy]
