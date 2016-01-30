@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130134434) do
+ActiveRecord::Schema.define(version: 20160130172916) do
 
   create_table "enquiries", force: :cascade do |t|
     t.string   "name"
@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 20160130134434) do
     t.string   "machine_name"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "page_promotions", force: :cascade do |t|
+    t.integer  "page_id"
+    t.integer  "promotion_card_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "pages", force: :cascade do |t|
