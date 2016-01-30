@@ -1,0 +1,19 @@
+#promotion_card_form_container
+= form_for([:admin, @promotion_card]) do |f|
+    .field
+        = f.label :name
+        = f.text_field :name 
+    .field
+        = f.label :body
+        = f.text_area :body, class: 'large'
+    .field
+        = f.label :image
+        = f.file_field :image
+    .field
+        = f.label :path
+        = f.text_field :path
+    .field
+        = f.submit 'Save'
+
+#promotion_preview_container
+    

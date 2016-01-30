@@ -60,13 +60,14 @@ ActiveRecord::Schema.define(version: 20160130134434) do
   end
 
   create_table "promotion_cards", force: :cascade do |t|
-    t.string   "title"
-    t.string   "body"
+    t.string   "name"
+    t.text     "body"
+    t.string   "path"
     t.string   "image"
-    t.string   "background"
-    t.string   "color"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "background", default: "#FCBA26"
+    t.string   "color",      default: "#05347A"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "services", force: :cascade do |t|

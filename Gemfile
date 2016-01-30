@@ -11,7 +11,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'haml-rails'
+
 gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'font-awesome-rails'
 gem 'wysiwyg-rails'
 

@@ -1,9 +1,5 @@
 #promotions_container
-	.promotion.boiler_servicing
-		.promotion_inner
-			%h2 Oil Boiler Servicing
-			%p We provide excellent value oil fired boiler servicing for most parts of Norfolk and Suffolk.
-			= link_to 'More', '#'
+	= render 'shared/promotion_card', promotion_card: PromotionCard.first
 
 	.promotion.delivery
 		.promotion_inner

@@ -1,0 +1,6 @@
+.promotion{style: "background:#{promotion_card.background}; color:#{promotion_card.color}"}
+	= image_tag promotion_card.image
+	.promotion_inner
+		%h2= promotion_card.name
+		%p= promotion_card.body
+		= link_to 'More', promotion_card.path
