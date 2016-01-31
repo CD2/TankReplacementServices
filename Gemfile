@@ -18,6 +18,11 @@ gem 'mini_magick'
 gem 'font-awesome-rails'
 gem 'wysiwyg-rails'
 
+group :production do
+  gem 'unicorn'
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'byebug'
 end
