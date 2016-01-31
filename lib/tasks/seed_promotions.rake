@@ -46,4 +46,29 @@ task :gen_promotions do
     PagePromotion.create!(page_id: 2, promotion_card_id: 5)
     PagePromotion.create!(page_id: 2, promotion_card_id: 6)
 
+    PagePromotion.create!(page_id: 3, promotion_card_id: 3)
+    PagePromotion.create!(page_id: 3, promotion_card_id: 4)
+    PagePromotion.create!(page_id: 3, promotion_card_id: 5)
+    PagePromotion.create!(page_id: 3, promotion_card_id: 6)
+
+    PagePromotion.create!(page_id: 4, promotion_card_id: 3)
+    PagePromotion.create!(page_id: 4, promotion_card_id: 4)
+    PagePromotion.create!(page_id: 4, promotion_card_id: 5)
+    PagePromotion.create!(page_id: 4, promotion_card_id: 6)
+
+    PagePromotion.create!(page_id: 5, promotion_card_id: 3)
+    PagePromotion.create!(page_id: 5, promotion_card_id: 4)
+    PagePromotion.create!(page_id: 5, promotion_card_id: 5)
+    PagePromotion.create!(page_id: 5, promotion_card_id: 6)
+
+    PagePromotion.create!(page_id: 6, promotion_card_id: 3)
+    PagePromotion.create!(page_id: 6, promotion_card_id: 4)
+    PagePromotion.create!(page_id: 6, promotion_card_id: 5)
+    PagePromotion.create!(page_id: 6, promotion_card_id: 6)
+
+    PagePromotion.create!(page_id: 7, promotion_card_id: 3)
+    PagePromotion.create!(page_id: 7, promotion_card_id: 4)
+    PagePromotion.create!(page_id: 7, promotion_card_id: 5)
+    PagePromotion.create!(page_id: 7, promotion_card_id: 6)
+
 end

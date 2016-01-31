@@ -2,7 +2,6 @@ task :gen_menus do
 
     admin_top_menu = Menu.create!(name: 'Admin Menu', machine_name: 'admin_top_menu')
     admin_side_menu = Menu.create!(name: 'Admin Side Menu', machine_name: 'admin_side_menu')
-    main_menu = Menu.create!(name: 'Main Menu', machine_name: 'main_menu')
 	
 	admin_top_menu.menu_item.create!(name: 'Home', path: '/', weight: 1)
 	admin_top_menu.menu_item.create!(name: 'Admin', path: '/admin', weight: 2)
@@ -11,6 +10,7 @@ task :gen_menus do
 	admin_side_menu.menu_item.create!(name: 'Services', path: '/admin/services', weight: 1)
 	admin_side_menu.menu_item.create!(name: 'FAQs', path: '/admin/faqs', weight: 1)
 	admin_side_menu.menu_item.create!(name: 'Pages', path: '/admin/pages', weight: 3)
+	admin_side_menu.menu_item.create!(name: 'Testimonials', path: '/admin/testimonails', weight: 3)
 	admin_side_menu.menu_item.create!(name: 'Promition Cards', path: '/admin/promotion_cards', weight: 5)
 	admin_side_menu.menu_item.create!(name: 'Users', path: '/admin/users', weight: 5)
 	admin_side_menu.menu_item.create!(name: 'Enquiries', path: '/admin/enquiries', weight: 6)

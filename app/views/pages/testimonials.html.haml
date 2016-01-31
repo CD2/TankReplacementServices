@@ -10,4 +10,9 @@
 	#page_content_inner
 		= raw @page.body
 
+		- @testimonials.each do |testimonail|
+			.testimonial_container
+				.name= testimonail.name
+				.body= raw testimonail.body
+
 	= render 'shared/promotions_container', page: @page

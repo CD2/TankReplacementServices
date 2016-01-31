@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   get 'contact_us' => 'enquiries#new'
   get 'contact_us/thanks' => 'enquiries#thanks'
   
-  get 'faq' => 'pages#faq'
+  get 'faqs' => 'pages#faq'
+  get 'testimonials' => 'pages#testimonials'
 
   resources :services, only: [:index, :show]
-  resources :testimonials, only: [:index]
   resources :projects, only: [:index, :show]
   resources :enquiries, only: [:new, :create]
   resources :sessions, only: [:new, :create]

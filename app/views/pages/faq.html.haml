@@ -1,9 +1,18 @@
-- provide :title, 'FAQs'
-#faq_page_container
-	
-	%h1 Frequently Asked Questions
+- provide :title, @page.name
 
-	- @faqs.each do |faq|
-		.question_container
-			.question= faq.question
-			.answer= raw faq.answer
+#header_image{style: ("background-image: url(#{@page.banner});" if @page.banner?)}
+
+- if @page.catchline?
+	#page_catchline
+		= raw @page.catchline
+
+#page_content
+	#page_content_inner
+		= raw @page.body
+
+		- @faqs.each do |faq|
+			.question_container
+				.question= faq.question
+				.answer= raw faq.answer
+
+	= render 'shared/promotions_container', page: @page
