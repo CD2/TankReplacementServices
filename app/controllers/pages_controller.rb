@@ -4,8 +4,9 @@ class PagesController < ApplicationController
     @page = Page.find_by(path: '')
   end
 
-  def about
-    @page = Page.find_by(path: 'about')
+  def testimonials
+    @page = Page.find_by(path: 'testimonials')
+    @testimonials = Testimonial.all
   end
 
   def faq

@@ -4,78 +4,60 @@
 	background-size: cover
 	background-position: 50%
 
-#promotions_container
-	+flex-grow(0)
-	+flex-shrink(0)
-	color: white
+
+#teasers
+	+flexbox
+	color: $primary_color
+	text-align: center
+	+justify-content(space-between)
+
+	.teaser
+		+flex(1)
+		background: $secondary_color
+		
+		p
+			padding: 0 20px
+			font-size: 1.125em
+
+		&+.teaser
+			margin-left: 2px
 
 
-#home_page_container
-	color: #727272
+		.more_link_container
+			background: $light_secondary_color
+			padding: 5px
 
+			a:after
+				content: ' \25B6'
 
-	#teasers
-		+flexbox
-		color: $primary_color
-		text-align: center
-		+justify-content(space-between)
+#popular_products_container
 
-		.teaser
-			+flex(1)
-			background: $secondary_color
-			
-			p
-				padding: 0 20px
-				font-size: 1.125em
+	h2
+		background: $primary_color
+		color: white
+		font-size: 1em
+		padding: 15px
+		font-weight: normal
+		margin: 30px 20px 5px 5px
 
-			&+.teaser
-				margin-left: 2px
+	ul
+		margin: 0.75em 0
+		padding: 0 1em
+		list-style: none
 
+	li
 
-			.more_link_container
-				background: $light_secondary_color
-				padding: 5px
+		&:before
+			content: ""
+			border-color: transparent $secondary_color
+			border-style: solid
+			border-width: 0.35em 0 0.35em 0.45em
+			display: block
+			height: 0
+			width: 0
+			left: -1em
+			top: 0.9em
+			position: relative
 
-				a:after
-					content: ' \25B6'
-
-	#lower_content
-		+flexbox
-
-		#home_page_content
-			padding: 25px
-
-			h1
-				font-size: 1.25em
-
-			#popular_products_container
-
-				h2
-					background: $primary_color
-					color: white
-					font-size: 1em
-					padding: 15px
-					font-weight: normal
-					margin: 30px 20px 5px 5px
-
-				ul
-					margin: 0.75em 0
-					padding: 0 1em
-					list-style: none
-
-				li
-
-					&:before
-						content: ""
-						border-color: transparent $secondary_color
-						border-style: solid
-						border-width: 0.35em 0 0.35em 0.45em
-						display: block
-						height: 0
-						width: 0
-						left: -1em
-						top: 0.9em
-						position: relative
-
-					a
-						color: $primary_color
+		a
+			color: $primary_color

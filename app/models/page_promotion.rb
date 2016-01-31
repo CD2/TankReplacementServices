@@ -1,6 +1,6 @@
 class PagePromotion < ActiveRecord::Base
 
-	has_many :Pages
-	has_many :PromotionCards
+	belongs_to :page
+	belongs_to :promotion_card
 
 end

@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 20160130172916) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "name"
+    t.string   "catchline"
+    t.string   "banner"
     t.string   "path"
     t.text     "body"
     t.datetime "created_at", null: false

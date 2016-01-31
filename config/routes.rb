@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'contact_us' => 'enquiries#new'
   get 'contact_us/thanks' => 'enquiries#thanks'
   
-  get 'about' => 'pages#about'
   get 'faq' => 'pages#faq'
 
   resources :services, only: [:index, :show]

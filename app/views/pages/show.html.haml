@@ -1,5 +1,13 @@
 - provide :title, @page.name
-#regular_page_wrapper
-  #regular_page_content
-    %h1= @page.name
-    = raw @page.body
+
+#header_image{style: "background-image: url(#{@page.banner});"}
+
+- if @page.catchline
+	#page_catchline
+		= raw @page.catchline
+
+#page_content
+	#page_content_inner
+		= raw @page.body
+
+	= render 'shared/promotions_container', page: @page
