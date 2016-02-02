@@ -1,13 +1,27 @@
 span.menu_spacer:before
 	content: '|'
+	@media screen and (max-width: 1000px)
+		display: none
 	
 #header_container
 
 	#top_nav
 		padding: 10px 15px
-		+flexbox
-		+justify-content(space-around)
+		@media screen and (min-width: 820px)
+			+flexbox
+			+justify-content(space-around)
 		color: $primary_color
+		@media screen and (max-width: 1000px)
+			font-size: 0.875rem
+		@media screen and (max-width: 820px)
+			span
+				display: block
+			text-align: right
+			position: absolute
+			right: 20px 
+			top: 20px
+		@media screen and (max-width: 650px)
+			display: none
 
 	#header_content
 		padding: 10px 15px
@@ -24,8 +38,7 @@ span.menu_spacer:before
 			.flex-spacer
 				display: none
 
-			>div
-				margin: 0 auto
+			
 
 		@media screen and (max-width: 440px)
 			#header_content_left > *, #header_content_right > *
@@ -52,7 +65,8 @@ span.menu_spacer:before
 					font-weight: bold
 
 		#header_content_right
-
+			@media screen and (max-width: 650px)
+				display: none
 			p
 				width: 196px
 				text-align: right
@@ -64,18 +78,24 @@ span.menu_spacer:before
 				display: inline-block
 
 	#main_menu
-		+flexbox
-		+justify-content(space-around)
 		background: $primary_color
 		color: white
 		padding: 10px 20px
+		span 
+			display: inline-block
+		@media screen and (max-width: 1000px)
+			font-size: 0.875rem
+			text-align: center
+			span 
+				margin: 0 10px 
+		@media screen and (max-width: 650px)
+			span 
+				display: none
+
 
 
 
 		.dropdown 
-
-			&:after
-				content: '\25BC'
 
 			&:hover div
 				max-height: 100px
@@ -94,3 +114,31 @@ span.menu_spacer:before
 				span
 					display: block
 
+#header_container #main_menu .menu_toggle_span
+	@media screen and (min-width: 650px)
+		display: none
+	display: block
+.menu_toggle
+
+#responsive_menu
+	text-align: center
+	background: $primary_color
+	a 
+		color: white
+	span 
+		display: block
+	font-size: 0.875rem
+	@media screen and (min-width: 650px)
+		display: none
+	.responsive_top_nav
+		border-bottom: 1px solid #2A55A5
+
+
+#responsive_menu
+	height: 0 
+	overflow: hidden
+	transition: 0.4s 
+	line-height: 1rem
+.responsive_open #responsive_menu
+	height: 640px
+	line-height: 2rem
