@@ -12,7 +12,7 @@
 
 		- @testimonials.each do |testimonail|
 			.testimonial_container
-				.name= testimonail.name
 				.body= raw testimonail.body
+				.name= testimonail.name
 
 	= render 'shared/promotions_container', page: @page
