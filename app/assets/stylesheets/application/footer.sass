@@ -1,18 +1,38 @@
 #footer_container
 	color: $primary_color
 	clear: both
-	margin-top: 40px
+	@media screen and (min-width: 500px)
+		margin-top: 40px
 
 	#logo_panel
 		border-top: 1px solid $primary_color
 		border-bottom: 1px solid $primary_color
 
+		img
+			width: 100%
+
 	#footer_catchline 
 		background: $secondary_color
 		padding: 15px
+		+flexbox
+		+justify-content(space-between)
 
-		#email_link
-			float: right
+		span
+			white-space: nowrap
+
+
+		a
+			text-align: right
+			+flex-shrink(0)
+		@media screen and (max-width: 900px)
+			#footer_catchline_content
+				width: 500px
+
+		@media screen and (max-width: 620px)
+			#footer_catchline_content
+				text-align: center
+			a
+				display: none
 
 	#footer_info
 		font-size: 0.625em

@@ -16,6 +16,9 @@
 	+flexbox
 	color: #727272
 
+	@media screen and (max-width: 650px)
+		+flex-direction(column)
+
 	#page_content_inner
 		padding: 25px
 		+flex-grow(1)
@@ -25,3 +28,10 @@
 
 		h2
 			font-size: 1em
+
+#narrow_page_content_inner
+	max-width: 500px
+	margin: 50px auto
+
+	h1,a
+		color: $primary_color

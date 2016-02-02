@@ -1,13 +1,15 @@
-= form_for(:session, url: login_path) do |f|
+#form_container
+	%h1	Login
+	= form_for(:session, url: login_path) do |f|
 
-	.field
-		= f.label :email
-		= f.email_field :email
-	.field
-		= f.label :password
-		= f.password_field :password
-	.field
-		= f.label :remember_me, 'Remember me?'
-		= f.check_box :remember_me
-	.field
-		= f.submit 'login'
+		.field
+			= f.label :email
+			= f.email_field :email
+		.field
+			= f.label :password
+			= f.password_field :password
+		.field
+			= f.label :remember_me, 'Remember me?'
+			= f.check_box :remember_me
+		.field
+			= f.submit 'login'

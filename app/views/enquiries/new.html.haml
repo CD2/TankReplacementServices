@@ -1,3 +1,4 @@
-= render 'shared/form_errors', object: @enquiry
-
-= render 'form'
+#form_container
+	%h1 Get In Touch
+	#errors= render 'shared/form_errors', object: @enquiry
+	= render 'form'

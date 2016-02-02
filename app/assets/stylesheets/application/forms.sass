@@ -28,9 +28,6 @@ select,
   &:focus
     outline: none
 
-.chosen-container-single .chosen-single
-  border-radius: 0
-
 textarea
   height: auto
 
@@ -40,154 +37,47 @@ label
   display: block
   opacity: 0.6
   line-height: 1.3rem
+  display: inline-block
 
 input[type="submit"]
   border: 0
-  background-color: $light_blue
+  background-color: $primary_color
   font-size: 0.875rem
-  //border-radius: 5px
   display: block
   color: white
   text-transform: uppercase
   letter-spacing: 1px
   height: 44px
   padding: 0 10px
-  //border-bottom: 4px solid #1A77B7
   line-height: 2.5rem
 
-.field_description
-  font-size: 0.8rem
-  font-style: italic
-  position: relative
-  bottom: 3px
-  margin-bottom: 10px
+label ~ input[type="checkbox"]
+  display: inline-block
+  margin: 5px 0 15px 0
 
-#admin_form
-  box-shadow: 0 2px 10px rgba(0,0,0,0.23)
-  width: 100%
-  box-sizing: border-box
+
+
+#form_container
+  background: $very_light_grey
   padding: 30px
-  background: white
-  &.narrow_form
-    max-width: 550px
-
-.secondary_form_link
-  float: right 
-  color: #666 
-  font-size: 0.875rem
-
-.checked_toggle_hide:checked ~ .field
-  display: none 
-
-.checked_toggle_hide ~ .field
-  display: block
-
-.colorpicker
-  width: 60px 
-  height: 60px
-
-.split_form
-  +flexbox 
-
-.split_form_left
-  +flex(2)
-  padding-right: 15px
-
-
-.split_form_right
-  +flex(1)
-  padding-left: 15px
-  img   
-    width: 120px
-
-#login_form
-  width: 100%
-  padding: 20px
-  box-sizing: border-box
-  background: white 
-  border-radius: 5px
-  box-shadow: 0 2px 10px rgba(0,0,0,0.23)
-  h1 
-    margin-top: 0
-    font-size: 1.5rem
-    color: $light_blue
-
-.inline_field 
-  width: 50%
-  display: inline-block
-  vertical-align: middle
-
-.inline_field.textarea_inline
-  height: 50px
-
-.inline_field + .actions 
-  display: inline-block
-  vertical-align: middle
   
-.inline_field.textarea_inline + .actions
-  vertical-align: top
+  @media screen and (min-width: 500px)
+    width: 400px
+    margin: 30px auto
+    border-radius: 10px
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3)
 
-.actions
-  margin-bottom: 10px
-  
-td input[type="text"] 
-  height: 36px
-  margin: 0
-  background-color: #FFF
-  border: 1px solid #bbb
+  h1, h2
+    color: $primary_color
+    text-align: center
 
-.table_form 
-  padding: 0
-  .even_split_container 
-    margin: 0 1px
-  input, .cancel_button
-    height: 36px
-    line-height: 36px
-    border: 1px solid #bbb!important
-    width: 100%
+  .errors_container
+    border: 1px solid $red
+    padding: 10px
+    margin: 20px 0
 
-.cancel_button
-  border: 0
-  background-color: #DD5757
-  font-size: 0.875rem
-  display: block
-  color: white
-  text-transform: uppercase
-  letter-spacing: 1px
-  text-align: center
-  box-sizing: border-box
+    ul
+      margin: 5px 0 0 0
 
-.compact_form, .inline_field, .inline_field + .actions
-  input 
-    height: 30px
-    line-height: 30px
-    margin-bottom: 0
-    &[type="submit"]
-      font-size: 0.8rem
-      letter-spacing: 0
-
-.form_with_text span 
-  display: block
-  margin-bottom: 15px
-  font-size: 0.875rem
-
-.check_box_field 
-  margin-bottom: 10px
-
-.field_group
-  margin-bottom: 30px
-  border: 1px solid #ddd
-  padding: 20px 
-  box-sizing: border-box
-  h2 
-    font-size: 1.25rem
-    text-transform: uppercase
-    color: $dark_blue
-
-.input_cell
-  padding: 0
-  height: 35px
-  border: 2px solid #ABABAB
-  input[type="text"]
-    display: block
-    border: 0
+  .field_with_errors input
+    border: 1px solid $red

@@ -14,13 +14,10 @@
 		%span.menu_spacer
 		%span=link_to 'News', '/news'
 		%span.menu_spacer
-		%span= link_to 'Contact Us', 'contact_us'
+		%span= link_to 'Contact Us', '/contact_us'
 
 	#header_content
 		
-		#header_content_right
-			%p Supply and installation of quality domestic and commercial oil tanks. All enquiries welcomed.
-			#boiler_image= image_tag 'boiler.jpg'
 
 		#header_content_left
 			#logo= link_to image_tag('logo.jpg'), root_url
@@ -31,6 +28,10 @@
 				%div
 					#phone_number_area Essex
 					#phone_number 01206 231555
+		.flex-spacer
+		#header_content_right
+			%p Supply and installation of quality domestic and commercial oil tanks. All enquiries welcomed.
+			#boiler_image= image_tag 'boiler.jpg'
 
 	#main_menu
 		%span.dropdown

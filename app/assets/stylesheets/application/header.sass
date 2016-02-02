@@ -11,9 +11,28 @@ span.menu_spacer:before
 
 	#header_content
 		padding: 10px 15px
+		+flexbox
 		
 		img
 			height: 150px
+			max-width: 100%
+
+
+		@media screen and (max-width: 820px)
+			+flex-direction(column)
+
+			.flex-spacer
+				display: none
+
+			>div
+				margin: 0 auto
+
+		@media screen and (max-width: 440px)
+			#header_content_left > *, #header_content_right > *
+				display: block !important
+				text-align: center !important
+		.flex-spacer
+			+flex-grow(1)
 
 		#header_content_left
 
@@ -31,8 +50,8 @@ span.menu_spacer:before
 
 				#phone_number
 					font-weight: bold
+
 		#header_content_right
-			float: right
 
 			p
 				width: 196px
