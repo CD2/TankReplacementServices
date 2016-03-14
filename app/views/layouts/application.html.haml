@@ -1,11 +1,14 @@
 !!!
 %html
   %head
-    %title= page_title yield :title
+    %title= page_title yield(:title)
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %script{:src => "https://use.typekit.net/beb6xmm.js"}
+    :javascript
+      try{Typekit.load({ async: true });}catch(e){}
 
   %body
     -if logged_in?
