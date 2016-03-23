@@ -48,7 +48,7 @@ class Admin::PromotionCardsController < AdminController
 	private
 
 	def promotion_card_params
-		params.require(:promotion_card).permit(:name, :path, :body, :image, :background, :color)
+		params.require(:promotion_card).permit(:name, :path, :body, :image, :background)
 	end
 
 	def set_promotion_card

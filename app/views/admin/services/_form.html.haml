@@ -4,6 +4,9 @@
     = f.text_field :name 
   .field
     = f.label :body
-    = f.text_area :body, class: 'editable'
+    = f.cktext_area :body
+  .field
+    = f.label :catchline
+    = f.text_field :catchline
   .actions
     = f.submit 'Save'

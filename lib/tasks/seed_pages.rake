@@ -1,19 +1,20 @@
 task :gen_pages do
 
-    Page.create!(
+    @home = Page.create!(
     	name: 'Home',
     	path: '',
+        catchline: 'A warm welcome to TRS, the region\'s leading oil tank suppliers and installers.',
     	body: '<h1>Welcome to TRS - the region’s No.1 Oil Tank Supplier</h1>
 				<p>TRS are the region\'s leading new oil tank suppliers. We supply, deliver and install domestic and commercial steel and plastic oil tanks to homes and businesses in Norfolk, Suffolk and Cambridgeshire.</p>
 				<p>If you need a new oil tank please call us for a free no-obligation quotation. We have a wide range of tanks in stock, in both plastic and steel, at competitive prices. Professional installation is carried out by our own OFTEC trained engineers.</p>
 				<p>As a family business with over 50 years experience in the oil industry we assure you of a very friendly service and highest professional standards.</p>')
 
 	
-    Page.create!(
+    @about_us = Page.create!(
     	name: 'About Us',
     	path: 'about',
     	banner: File.open(File.join(Rails.root, "seed_images/about_us_banner.jpg")),
-    	catchline: 'A family business with over fifty years experience in the oil industry.<br>We believe in good old family service.',
+    	catchline: 'A family business built on traditional values with over 50 years experience in the oil industry.',
     	body: '<h1>Welcome to TRS - the region’s No.1 Oil Tank Supplier</h1>
 				<p>TRS are the region\'s leading supplier of domestic and commercial plastic or steel oil tanks. We offer competitive prices, a wide range of tanks in stock ready for delivery, friendly service and professional installation.</p>
 				<p>We are a friendly family-run business based in Wendling - a lovely little village near Dereham, Norfolk, about 10 miles west of Norwich. Typically we install tanks in Norfolk, Suffolk, Cambridgeshire and Essex - if you live outside of these areas we maybe able to help you depending on the size of your project.</p>
@@ -22,22 +23,22 @@ task :gen_pages do
 				<p>All our installation engineers are fully OFTEC (Oil Firing Technical Association for the Petroleum Industry) registered and we are fully covered by public and employer\'s liability insurance.</p>
 				<p>Our expertise also extends to a comprehensive and reliable boiler servicing and repair service for all makes of oil-fired boiler. Whatever your needs, you\'ll certainly be in safe hands with us.</p>')
 
-    Page.create!(
+    @faqs = Page.create!(
         name: 'FAQs',
         path: 'faq',
         catchline: 'If you can\'t find an answer to your question please call our Head Office and we will be pleased to help you.',
         body: '<h1>Frequently Asked Questions</h1>')
 
-    Page.create!(
+    @testimonials = Page.create!(
         name: 'Testimonials',
         path: 'testimonials',
-        catchline: 'It\'s easy to claim good service, much harder to deliver it. We deliver!<br>We\'re happy to let our customers do the talking',
+        catchline: 'It\'s easy to claim good service, much harder to deliver it. We deliver!',
         body: '<h1>Customer Testimonials</h1>')
 
-    Page.create!(
+    @emergency_help = Page.create!(
     	name: 'Emergency Help',
     	path: 'emergency',
-    	catchline: 'If you have a genuine emergency and are based in Norfolk or Suffolk please call our 24/7 help line XXXXX XXXXXX',
+    	catchline: 'If you have a genuine emergency and are in Norfolk or Suffolk please call our 24/7 help line : XXXXX XXXXXX',
     	body: '<h1>Emergency? Stay calm and call TRS.</h1>
                 <p>Is your oil tank splitting? Do you have oil leaking from your tank? If so, call us on <b>07974 454904</b>.</p>
                 <p><b>This is an emergency number available 24 hours a day, 7 days a week, to customers with a genuine emergency in Norfolk and Suffolk only.</b> We are sorry but we cannot help you if you live outside of Norfolk or Suffolk.</p>
@@ -47,10 +48,10 @@ task :gen_pages do
                 <p>Plastic non-bunded oil tanks more than 2 years old are the most vulnerable to splitting. This can be due to the affects of UV rays from the sun during very hot summer weather, or frost and freezing temperatures in the winter.</p>
                 <p>Please take a close look at your tank, and inspect it carefully. If your tank is showing any signs of <b>small scratches</b> or <b>cuts on the tank<b/>, take a good quality close up picture and e-mail it with your phone number to info@tankreplacementservices.co.uk or call us on the emergency number <b>07974 454904</b>. We will check it for you, free of charge.</p>')
 
-    Page.create!(
+    @oil_boiler = Page.create!(
         name: 'Oil Fired Boiler Servicing',
         path: 'servicing',
-        catchline: 'For customers within 30 miles of Dereham we offer professional oil fired boiler servicing at good price values.',
+        catchline: 'For customers within 30 miles of Dereham we offer excellent value, professional oil-fired boiler servicing.',
         body: '<h1>Oil Fired Boiler Servicing & Installation</h1>
                 <p>TRS are delighted to offer you a professional and friendly service for all your oil-fired boiler needs.</p>
                 <h2>OIL-FIRED BOILER SERVICING</h2>
@@ -60,13 +61,15 @@ task :gen_pages do
                 <p>For servicing or installations please call 01362 687 144 or click here to request a call back
                 Or for more information please visit our boiler servicing web site www.xxxxxxxxxxxxxxxxxxxxxxxxx.xo.uk</p>')
 
-    Page.create!(
+    @news = Page.create!(
         name: 'News',
         path: 'news',
-        catchline: 'If you can\'t find an answer to your question please call our Head Office and we will be pleased to help you.',
+        catchline: 'Keep up to date with the latest oil industry and TRS news.',
         body: '<h1>Latest Oil News from TRS</h1>
                 <p>News headline from TRS</p>
                 <p>Text to be provided by TRS ...</p>')
+
+    @contact = Page.create!(path: 'contact', catchline: 'We welcome all enquiries. Feel free to call us on 01362 687144 or 01206 231555.')
 
 end
 

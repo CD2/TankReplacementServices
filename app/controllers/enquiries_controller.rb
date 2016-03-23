@@ -2,6 +2,7 @@ class EnquiriesController < ApplicationController
 
 	def new
 		@enquiry = Enquiry.new
+		@page = Page.find_by(path: 'contact')
 	end
 
 	def create

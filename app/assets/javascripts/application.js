@@ -12,21 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require froala_editor.min.js
+//= require ckeditor/init
 //= require_tree .
 
 $(function() {
-
-	//$("textarea.editable").editable({
-	//    inlineMode: false,
-	//    plainPaste: true,
-	//    height: 300,
-	//	toolbarButtonsSM: ['bold', 'italic', 'underline', 'strikeThrough', 'color', '|', 'paragraphFormat', 'align', 'undo', 'redo', 'html'],
-	//    colorsText: [
-	//        '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
-	//        '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
-	//    ]
-	//});
 
 	$('.menu_toggle').on('click', function(){
 		$('html').toggleClass('responsive_open')

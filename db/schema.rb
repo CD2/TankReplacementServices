@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130172916) do
+ActiveRecord::Schema.define(version: 20160323142433) do
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
   create_table "enquiries", force: :cascade do |t|
     t.string   "name"
@@ -45,8 +61,9 @@ ActiveRecord::Schema.define(version: 20160130172916) do
   end
 
   create_table "page_promotions", force: :cascade do |t|
-    t.integer  "page_id"
     t.integer  "promotion_card_id"
+    t.integer  "thing_id"
+    t.string   "thing_type"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
@@ -71,16 +88,15 @@ ActiveRecord::Schema.define(version: 20160130172916) do
   create_table "promotion_cards", force: :cascade do |t|
     t.string   "name"
     t.text     "body"
-    t.string   "path"
     t.string   "image"
     t.string   "background", default: "#FCBA26"
-    t.string   "color",      default: "#05347A"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
 
   create_table "services", force: :cascade do |t|
     t.string   "name"
+    t.string   "catchline"
     t.text     "body"
     t.string   "banner"
     t.datetime "created_at", null: false

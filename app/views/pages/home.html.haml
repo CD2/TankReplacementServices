@@ -1,5 +1,7 @@
 #header_image{style: ("background-image: url(#{@page.banner});" if @page.banner?)}
-
+- if @page.catchline?
+	#page_catchline
+		= raw @page.catchline
 #teasers
 	.teaser
 		%h2 Home Owners

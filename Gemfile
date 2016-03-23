@@ -16,7 +16,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'font-awesome-rails'
-gem 'wysiwyg-rails'
+gem 'ckeditor'
 
 group :production do
   gem 'unicorn'

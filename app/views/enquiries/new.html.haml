@@ -1,4 +1,11 @@
-#form_container
-	%h1 Get In Touch
-	#errors= render 'shared/form_errors', object: @enquiry
-	= render 'form'
+- if @page.catchline?
+  #page_catchline
+    = raw @page.catchline
+#contact_page_container
+  #form_container
+    %h1 Get In Touch
+    #errors= render 'shared/form_errors', object: @enquiry
+    = render 'form'
+
+
+  = render 'shared/promotions_container', page: @page

@@ -8,14 +8,11 @@
     %tr
       %th
         Card
-      %th
-        Path
       %th{'colspan' => 2}
   %tbody
     - @promotion_cards.each do |pc|
       %tr
         %td= render 'shared/promotion_card', promotion_card: pc
-        %td= pc.path
 
         %td= link_to 'edit', [:edit, :admin, pc]
         %td= link_to 'delete', [:admin, pc], method: 'delete', confirm: 'Are you sure?'

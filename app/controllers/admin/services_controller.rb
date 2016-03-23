@@ -48,7 +48,7 @@ class Admin::ServicesController < AdminController
 	private
 
 	def service_params
-		params.require(:service).permit(:name, :body)
+		params.require(:service).permit(:name, :body, :catchline)
 	end
 
 	def set_service

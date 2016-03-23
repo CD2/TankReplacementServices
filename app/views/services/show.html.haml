@@ -1,9 +1,13 @@
 - provide :title, @service.name
+
+- if @service.catchline?
+  #page_catchline
+    = raw @service.catchline
 #service_page_container
-	#service_content
-		%h1= @service.name
-		= raw @service.body
+  #service_content
+    %h1= @service.name
+    = raw @service.body
 
-		#call_to_action For friendly sevice and a free estimate please call 01362 687 144 or click here to request a call back
+    #call_to_action For friendly sevice and a free estimate please call 01362 687 144 or click here to request a call back
 
-	= render 'shared/promotions_container', page: @page
+  = render 'shared/promotions_container', page: @service
