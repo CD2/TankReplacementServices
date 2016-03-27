@@ -89,9 +89,9 @@ ActiveRecord::Schema.define(version: 20160323142433) do
     t.string   "name"
     t.text     "body"
     t.string   "image"
-    t.string   "background", default: "#FCBA26"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "background"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "services", force: :cascade do |t|

@@ -3,27 +3,32 @@ task :gen_promotions do
     PromotionCard.create!(
         name: 'Deal Prices For Farmers',
         body: 'We have special deals for Farmers on custom made steel tanks.Call 01362 687144 for details.',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_1.jpg')
     )
     PromotionCard.create!(
         name: 'British Made Custom Tanks',
         body: 'We design and build our own best-quality steel tanks. We can build one-offs to your exact needs.',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_2.jpg')
     )
     PromotionCard.create!(
         name: 'Oil Boiler Servicing',
         body: 'We provide professional oil-fired boiler servicing for most parts of Norfolk and Suffolk.',
-        image: File.open(Rails.root + 'seed_images/promotion_3.jpg',
-        background: '#F37020')
+        background: '#F37020',
+        image: File.open(Rails.root + 'seed_images/promotion_3.jpg'
+        )
     )
     PromotionCard.create!(
         name: 'Oil Security',
         body: 'Worried about oil theft? Ask us for details of our range of effective oil security devices.',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_4.jpg')
     )
     PromotionCard.create!(
         name: 'Oil Tank Removal',
         body: 'We’ll safely dispose of your old tank and transfer your existing oil to your new tank.',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_5.jpg')
     )
     PromotionCard.create!(
@@ -35,31 +40,37 @@ task :gen_promotions do
     PromotionCard.create!(
         name: 'Nationwide Delivery',
         body: 'Subject to the order value, we can deliver and install custom made tanks in all parts of the UK.',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_7.jpg')
     )
     PromotionCard.create!(
         name: 'Oftec-trained Engineers',
         body: 'Our oil tank installations are carried out by our own highly skilled OFTEC-trained engineers.',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_8.jpg')
     )
     PromotionCard.create!(
         name: 'Custom Built Tanks',
         body: 'We can build a one-off tank to meet your exact needs. Call us for a free quotation.',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_9.jpg')
     )
     PromotionCard.create!(
         name: 'Trs To Advise',
         body: 'TRS advice needed for the image and text content required in this section. To be updated.',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_10.jpg')
     )
     PromotionCard.create!(
         name: 'Excellent Service',
         body: 'We are a family-run business and we provide good old-fashioned customer service with a smile',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_11.jpg')
     )
     PromotionCard.create!(
         name: 'Wide Range In Stock',
         body: 'We have a wide range of oil tanksin stock from 500 to 3000 litres for quick delivery',
+        background: '#FCBA26',
         image: File.open(Rails.root + 'seed_images/promotion_12.jpg')
     )
 
@@ -83,8 +94,8 @@ task :gen_promotions do
     @emergency_help.page_promotions.create!(promotion_card_id: 3)
 
     @oil_boiler.page_promotions.create!(promotion_card_id: 3)
-    @oil_boiler.page_promotions.create!(promotion_card_id: 3)
     @oil_boiler.page_promotions.create!(promotion_card_id: 11)
+    @oil_boiler.page_promotions.create!(promotion_card_id: 4)
     
     @faqs.page_promotions.create!(promotion_card_id: 11)
     @faqs.page_promotions.create!(promotion_card_id: 4)
