@@ -35,13 +35,13 @@
 
 	#main_menu
 		%span.dropdown
-			= link_to 'Plastic Oil Tanks', '/services/1'
+			= link_to 'Plastic Oil Tanks', '#', class: 'blank_link'
 			%div
 				%span=link_to 'Domestic Plastic Tanks', '/services/2'
 				%span=link_to 'Commercial Plastic Tanks', '/services/3'
 
 		%span.dropdown
-			=link_to 'Steel Oil Tanks', '/services/4'
+			=link_to 'Steel Oil Tanks', '#', class: 'blank_link'
 			%div
 				%span=link_to 'Domestic Steel Tanks', '/services/5'
 				%span=link_to 'Commercial Steel Tanks', '/services/6'
@@ -52,9 +52,9 @@
 
 		%span=link_to 'Oil Conditioning', '/services/9'
 
-		%span=link_to 'Accessories', '/services/10'
+		%span=link_to 'Accessories', '/services/11'
 
-		%span=link_to 'Tank Decommission', '/services/11'
+		%span=link_to 'Tank Decommission', '/services/12'
 		%span.menu_toggle_span=link_to 'Menu', 'javascript:void(0)', class: 'menu_toggle'
 	#responsive_menu
 		.responsive_top_nav
@@ -92,6 +92,6 @@
 			%span.menu_spacer
 			%span=link_to 'Oil Conditioning', '/services/9'
 			%span.menu_spacer
-			%span=link_to 'Accessories', '/services/10'
+			%span=link_to 'Accessories', '/services/11'
 			%span.menu_spacer
-			%span=link_to 'Tank Decommission', '/services/11'
+			%span=link_to 'Tank Decommission', '/services/12'

@@ -1,5 +1,7 @@
 - provide :title, @service.name
 
+- unless @service.banner.blank?
+  = image_tag @service.banner, class: 'service_banner'
 - if @service.catchline?
   #page_catchline
     = raw @service.catchline

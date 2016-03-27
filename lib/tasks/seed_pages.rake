@@ -4,6 +4,7 @@ task :gen_pages do
     	name: 'Home',
     	path: '',
         catchline: 'A warm welcome to TRS, the region\'s leading oil tank suppliers and installers.',
+      banner: File.open(File.join(Rails.root, 'seed_images/trs_header_01_home.jpeg')),
     	body: '<h1>Welcome to TRS - the region’s No.1 Oil Tank Supplier</h1>
 				<p>TRS are the region\'s leading new oil tank suppliers. We supply, deliver and install domestic and commercial steel and plastic oil tanks to homes and businesses in Norfolk, Suffolk and Cambridgeshire.</p>
 				<p>If you need a new oil tank please call us for a free no-obligation quotation. We have a wide range of tanks in stock, in both plastic and steel, at competitive prices. Professional installation is carried out by our own OFTEC trained engineers.</p>
@@ -13,7 +14,7 @@ task :gen_pages do
     @about_us = Page.create!(
     	name: 'About Us',
     	path: 'about',
-    	banner: File.open(File.join(Rails.root, "seed_images/about_us_banner.jpg")),
+    	banner: File.open(File.join(Rails.root, 'seed_images/trs_header_02_about_us.jpeg')),
     	catchline: 'A family business built on traditional values with over 50 years experience in the oil industry.',
     	body: '<h1>Welcome to TRS - the region’s No.1 Oil Tank Supplier</h1>
 				<p>TRS are the region\'s leading supplier of domestic and commercial plastic or steel oil tanks. We offer competitive prices, a wide range of tanks in stock ready for delivery, friendly service and professional installation.</p>
@@ -26,18 +27,21 @@ task :gen_pages do
     @faqs = Page.create!(
         name: 'FAQs',
         path: 'faq',
+        banner: File.open(File.join(Rails.root, 'seed_images/trs_header_06_faqs.jpeg')),
         catchline: 'If you can\'t find an answer to your question please call our Head Office and we will be pleased to help you.',
         body: '<h1>Frequently Asked Questions</h1>')
 
     @testimonials = Page.create!(
         name: 'Testimonials',
         path: 'testimonials',
+        banner: File.open(File.join(Rails.root, 'seed_images/trs_header_03_customer_testimonials.jpeg')),
         catchline: 'It\'s easy to claim good service, much harder to deliver it. We deliver!',
         body: '<h1>Customer Testimonials</h1>')
 
     @emergency_help = Page.create!(
     	name: 'Emergency Help',
     	path: 'emergency',
+      banner: File.open(File.join(Rails.root, 'seed_images/trs_header_04_emergency_call_out.jpeg')),
     	catchline: 'If you have a genuine emergency and are in Norfolk or Suffolk please call our 24/7 help line : XXXXX XXXXXX',
     	body: '<h1>Emergency? Stay calm and call TRS.</h1>
                 <p>Is your oil tank splitting? Do you have oil leaking from your tank? If so, call us on <b>07974 454904</b>.</p>
@@ -51,6 +55,7 @@ task :gen_pages do
     @oil_boiler = Page.create!(
         name: 'Oil Fired Boiler Servicing',
         path: 'servicing',
+        banner: File.open(File.join(Rails.root, 'seed_images/trs_header_05_oil_boiler_servicing.jpeg')),
         catchline: 'For customers within 30 miles of Dereham we offer excellent value, professional oil-fired boiler servicing.',
         body: '<h1>Oil Fired Boiler Servicing & Installation</h1>
                 <p>TRS are delighted to offer you a professional and friendly service for all your oil-fired boiler needs.</p>
@@ -64,12 +69,16 @@ task :gen_pages do
     @news = Page.create!(
         name: 'News',
         path: 'news',
+        banner: File.open(File.join(Rails.root, 'seed_images/trs_header_07_news.jpeg')),
         catchline: 'Keep up to date with the latest oil industry and TRS news.',
         body: '<h1>Latest Oil News from TRS</h1>
                 <p>News headline from TRS</p>
                 <p>Text to be provided by TRS ...</p>')
 
-    @contact = Page.create!(path: 'contact', catchline: 'We welcome all enquiries. Feel free to call us on 01362 687144 or 01206 231555.')
+    @contact = Page.create!(
+        path: 'contact',
+        banner: File.open(File.join(Rails.root, 'seed_images/trs_header_08_contact.jpeg')),
+        catchline: 'We welcome all enquiries. Feel free to call us on 01362 687144 or 01206 231555.')
 
 end
 
