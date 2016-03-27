@@ -14,7 +14,7 @@ task :gen_promotions do
         name: 'Oil Boiler Servicing',
         body: 'We provide professional oil-fired boiler servicing for most parts of Norfolk and Suffolk.',
         image: File.open(Rails.root + 'seed_images/promotion_3.jpg',
-        background: '#F87100')
+        background: '#F37020')
     )
     PromotionCard.create!(
         name: 'Oil Security',
