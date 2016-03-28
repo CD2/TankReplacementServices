@@ -1,0 +1,12 @@
+You have a new Enquiry
+
+Name |<%= @enquiry.name %>
+-----+-----------------------------------------------
+Email|<%= @enquiry.email %>
+-----+-----------------------------------------------
+Body |<%= @enquiry.body.gsub("\r\n", "\r\n     |") %>
+
+
+View at: <%= url_for [:admin, @enquiry] %>
+Enquiry Made At: <%= @enquiry.created_at.strftime '%e/%M/%y at %H:%M' %>
+Sent From:       <%= Rails.application.config.action_mailer.default_url_options[:host] %>

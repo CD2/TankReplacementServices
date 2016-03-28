@@ -1,11 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 enquiry_one:
-  name: Name One
-  email: email@test.com
-  body: MyText
-
-enquiry_two:
-  name: Name Two
-  email: enquiry_two@test.com
-  body: MyText
+  name: Joe Blogs
+  email: enquiry@test.com
+  body: Hi this is the body of a test enquiry.

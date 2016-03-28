@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: CONFIG['enquiries_from']
+  default from: "from@example.com"
   layout 'mailer'
 end

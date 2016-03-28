@@ -1,0 +1,72 @@
+!!!
+%html
+  %head
+    :sass
+      body
+        font-family: sans
+        max-width: 600px
+
+      #header
+        padding: 30px 10px
+        text-align: center
+
+        h1
+          font-weight: normal
+          background: #ececec
+          padding: 10px
+
+        a
+          font-size: 12px
+
+      #page_wrapper
+        margin: 10px
+        .field
+          padding: 20px
+          color: #333
+          margin: 10px 0
+          border-bottom: 3px solid #ccc
+
+          .label
+            font-weight: bold
+            font-size: 0.875em
+
+
+          .content
+            font-size: 16px
+            padding: 10px 0px 5px
+
+      #footer
+        background: #333
+        color: rgba(white, 0.4)
+        font-size: 0.875em
+        text-align: right
+        padding: 5px 10px
+        margin-top: 20px
+        span
+          margin-left: 20px
+        .key
+          opacity: 0.5
+
+  %body
+    #header
+      = image_tag 'logo.png'
+      %h1 New Enquiry
+      = link_to 'View on Site', [:admin, @enquiry]
+
+    #page_wrapper
+      .field
+        .label Name
+        .content= @enquiry.name
+      .field
+        .label Email
+        .content= @enquiry.email
+      .field
+        .label Body
+        .content= simple_format @enquiry.body
+    #footer
+      %span
+        %span.key Sent At:
+        = @enquiry.created_at.strftime '%e/%M/%y at %H:%M'
+      %span
+        %span.key Sent From:
+        = Rails.application.config.action_mailer.default_url_options[:host]
