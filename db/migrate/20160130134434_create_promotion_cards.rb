@@ -4,7 +4,7 @@ class CreatePromotionCards < ActiveRecord::Migration
       t.string :name
       t.text :body
       t.string :image
-      t.string :background, default: '#FCBA26'
+      t.string :background
 
       t.timestamps null: false
     end

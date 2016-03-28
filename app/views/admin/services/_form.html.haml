@@ -1,4 +1,8 @@
 = form_for([:admin, @service]) do |f|
+
+  .field
+    = f.label :banner
+    = f.file_field :banner
   .field
     = f.label :name
     = f.text_field :name 

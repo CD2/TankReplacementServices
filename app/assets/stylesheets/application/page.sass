@@ -1,38 +1,40 @@
 #promotions_container
-	+flex(0)
-	color: white
-	min-width: 360px
-	padding-top: 10px
-
+  +flex(0)
+  color: white
+  min-width: 360px
+  padding-top: 10px
+.service_banner
+  width: 100%
+  display: block
 #page_catchline
-	background: $secondary_color
-	color: $primary_color
-	text-align: center
-	font-size: 1.625em
-	padding: 10px
-	font-weight: bold
-	line-height: 1.25em
+  background: $secondary_color
+  color: $primary_color
+  text-align: center
+  font-size: 1.625em
+  padding: 10px
+  font-weight: bold
+  line-height: 1.25em
 
 #page_content
-	+flexbox
-	color: #727272
+  +flexbox
+  color: #727272
 
-	@media screen and (max-width: 700px)
-		+flex-direction(column)
+  @media screen and (max-width: 700px)
+    +flex-direction(column)
 
-	#page_content_inner
-		padding: 25px
-		+flex-grow(1)
+  #page_content_inner
+    padding: 25px
+    +flex-grow(1)
 
-		h1
-			font-size: 1.25em
+    h1
+      font-size: 1.25em
 
-		h2
-			font-size: 1em
+    h2
+      font-size: 1em
 
 #narrow_page_content_inner
-	max-width: 500px
-	margin: 50px auto
+  max-width: 500px
+  margin: 50px auto
 
-	h1,a
-		color: $primary_color
+  h1,a
+    color: $primary_color
