@@ -55,3 +55,4 @@ class Admin::FaqsController < AdminController
     end
 
 end
+
