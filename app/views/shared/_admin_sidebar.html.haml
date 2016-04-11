@@ -1,5 +1,11 @@
 #sidebar
   #logo= image_tag('logo.jpg')
-  = render_menu :admin_side_menu
+  = link_to 'Services', admin_services_path
+  = link_to 'Faqs', admin_faqs_path
+  = link_to 'Pages', admin_pages_path
+  = link_to 'Promotion Cards', admin_promotion_cards_path
+  = link_to 'Users', admin_users_path
+  = link_to 'Enquiries', admin_enquiries_path
+  = link_to 'Testimonials', admin_testimonials_path
   .flex_spacer
   = link_to 'Settings', '#', class: ['settings']

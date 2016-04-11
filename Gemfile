@@ -14,11 +14,14 @@ gem 'haml-rails'
 
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'figaro'
 
 gem 'font-awesome-rails'
 gem 'ckeditor'
 
 group :production do
+  gem 'fog'
+  gem 'rails_12factor'
   gem 'unicorn'
   gem 'pg'
 end
