@@ -12,6 +12,7 @@ class EnquiriesController < ApplicationController
 			redirect_to contact_us_thanks_path
 			EnquiryMailer.new_enquiry(@enquiry).deliver_now
 		else
+			@page = Page.find_by(path: 'contact')
 			render :new
 		end
 	end

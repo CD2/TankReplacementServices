@@ -14,7 +14,7 @@ class Admin::PagesController < AdminController
 		@page = Page.new(page_params)
 		if @page.save
 			flash[:success] = 'Page Created'
-			redirect_to [:admin, :pages]
+			redirect_to "/#{@page.path}"
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ class Admin::PagesController < AdminController
 		@page.update_attributes(page_params)
 		if @page.save
 			flash[:success] = 'Page Updated'
-			redirect_to [:admin, :pages]
+			redirect_to "/#{@page.path}"
 		else
 			flash[:error] = 'Sorry, an error occured'
 			render :edit

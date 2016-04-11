@@ -1,6 +1,4 @@
-task :gen_services do
-
-  task gen_services: :environment do 
+task gen_services: :environment do
 
     Service.create!(      
       name: 'Plastic Oil Tanks',
@@ -86,5 +84,4 @@ task :gen_services do
 
   end
 
-end
 

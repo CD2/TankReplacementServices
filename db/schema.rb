@@ -44,22 +44,6 @@ ActiveRecord::Schema.define(version: 20160323142433) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "menu_items", force: :cascade do |t|
-    t.integer  "menu_id"
-    t.string   "name"
-    t.string   "path"
-    t.integer  "weight"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "menus", force: :cascade do |t|
-    t.string   "name"
-    t.string   "machine_name"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "page_promotions", force: :cascade do |t|
     t.integer  "promotion_card_id"
     t.integer  "thing_id"

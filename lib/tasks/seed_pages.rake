@@ -1,4 +1,4 @@
-task :gen_pages do
+task gen_pages: :environment do
 
     @home = Page.create!(
     	name: 'Home',

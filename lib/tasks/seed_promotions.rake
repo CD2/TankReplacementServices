@@ -1,4 +1,4 @@
-task :gen_promotions do
+task gen_promotions: :environment do
 
     PromotionCard.create!(
         name: 'Deal Prices For Farmers',
@@ -34,8 +34,8 @@ task :gen_promotions do
     PromotionCard.create!(
         name: 'Leaking Oil Emergency?',
         body: 'Split tank? Leaks? Call our 24/7 emergency number 0777 777 7777(Norfolk and Suffolk only).',
-        image: File.open(Rails.root + 'seed_images/promotion_6.jpg',
-        background: '#FFBB00')
+        image: File.open(Rails.root + 'seed_images/promotion_6.jpg'),
+        background: '#FFBB00'
     )
     PromotionCard.create!(
         name: 'Nationwide Delivery',

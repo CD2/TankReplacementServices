@@ -1,4 +1,4 @@
-task :gen_faqs do
+task gen_faqs: :environment do
 
 	Faq.create!(question: 'I\'m not sure what oil tank I need, can you help?', answer: 'Yes. Please give us a call - we\'ll ask you a few questions about your property and can then advise you on the best type and size of tank for you. Our estimates are free and without obligation.')
 	Faq.create!(question: 'How quickly can you deliver and install my new oil tank?', answer: 'We have most sizes of tank in stock and ready to deliver. Installation dates are agreed with you at a time to suit you. It generally takes just a few days to install your tank, but can be done within 48 hours if needed.')

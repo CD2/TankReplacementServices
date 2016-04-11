@@ -1,4 +1,5 @@
 #admin_top_nav
-  = link_to 'Home', root_path
-  = link_to 'Admin', admin_root_path
+  / = link_to 'Home', root_path
+  / = link_to 'Admin', admin_root_path
+  = yield :admin_contextual_links
   = link_to 'Logout', '/logout', class: 'logout'

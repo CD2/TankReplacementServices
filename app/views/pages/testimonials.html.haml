@@ -1,18 +1,20 @@
 - provide :title, @page.name
+= content_for :admin_contextual_links do
+  = link_to 'Edit Page', edit_admin_page_path(@page)
 
 #header_image{style: ("background-image: url(#{@page.banner});" if @page.banner?)}
 
 - if @page.catchline?
-	#page_catchline
-		= raw @page.catchline
+  #page_catchline
+    = raw @page.catchline
 
 #page_content
-	#page_content_inner
-		= raw @page.body
+  #page_content_inner
+    = raw @page.body
 
-		- @testimonials.each do |testimonail|
-			.testimonial_container
-				.body= raw testimonail.body
-				.name= testimonail.name
+    - @testimonials.each do |testimonail|
+      .testimonial_container
+        .body= raw testimonail.body
+        .name= testimonail.name
 
-	= render 'shared/promotions_container', page: @page
+  = render 'shared/promotions_container', page: @page
