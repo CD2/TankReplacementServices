@@ -1,4 +1,4 @@
-task :gen_menus do
+task gen_menus: :environment do
 
     admin_top_menu = Menu.create!(name: 'Admin Menu', machine_name: 'admin_top_menu')
     admin_side_menu = Menu.create!(name: 'Admin Side Menu', machine_name: 'admin_side_menu')

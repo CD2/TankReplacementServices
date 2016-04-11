@@ -1,4 +1,4 @@
-task :gen_promotions do
+task gen_promotions: :environment do
 
     PromotionCard.create!(
         name: 'Deal Prices For Farmers',
