@@ -5,4 +5,6 @@ class Page < ActiveRecord::Base
 	has_many :page_promotions, as: :thing
 	has_many :promotion_cards, through: :page_promotions
 
+  default_scope -> { where fake: false}
+
 end
