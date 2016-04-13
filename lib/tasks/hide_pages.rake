@@ -7,6 +7,6 @@ task hide_pages: :environment do
     catchline: 'If you can\'t find an answer to your question please call our Head Office and we will be pleased to help you.',
     body: '<h1>Frequently Asked Questions</h1>', fake: true)
 
-  Page.find_by('contact').update({fake: true})
+  Page.find_by(path: 'contact').update({fake: true})
 
 end
