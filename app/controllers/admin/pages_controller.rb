@@ -3,7 +3,7 @@ class Admin::PagesController < AdminController
 	before_action :set_page, only: [:edit, :update, :destroy]
 
 	def index
-		@pages = Page.all
+		@pages = Page.where(fake: false)
 	end
 
 	def new
