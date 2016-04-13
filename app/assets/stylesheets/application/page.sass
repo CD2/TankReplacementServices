@@ -16,11 +16,10 @@
   line-height: 1.25em
 
 #page_content
-  +flexbox
   color: #727272
 
-  @media screen and (max-width: 700px)
-    +flex-direction(column)
+  @media screen and (min-width: 700px)
+    +flexbox
 
   #page_content_inner
     padding: 25px
