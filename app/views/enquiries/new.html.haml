@@ -26,14 +26,6 @@
       %br/
       NR19 2NE
     %hr
-    %h2 Tank Enquiry
-    #errors= render 'shared/form_errors', object: @enquiry
-    = render 'form'
-
-    %hr
-    %h3 Heating Service Enquiry
-    %em Please note: We only offer boiler servicing within 25 miles of NR19 2NE
-    #errors= render 'shared/form_errors', object: @enquiry
-    = render 'heating_form'
-
-  = render 'shared/promotions_container', page: @page
+    %span= link_to 'Heating Service Enquiry', heating_enquiry_enquiries_path
+    %br/
+    %span= link_to 'Oil Tank Enquiry', tank_enquiry_enquiries_path
