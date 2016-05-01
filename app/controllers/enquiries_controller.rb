@@ -17,6 +17,14 @@ class EnquiriesController < ApplicationController
 		end
 	end
 
+	def heating_enquiry
+		@enquiry = Enquiry.new
+	end
+
+	def tank_enquiry
+		@enquiry = Enquiry.new
+	end
+
 	private
 		def enquiry_params
 			params.require(:enquiry).permit(:name, :email, :body)

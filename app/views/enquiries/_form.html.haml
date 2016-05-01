@@ -1,12 +1,39 @@
 = form_for(@enquiry) do |f|
   .field
     = f.label :name
-    = f.text_field :name 
+    = f.text_field :name
+  .field
+    = f.label :company
+    = f.text_field :company
   .field
     = f.label :email
     = f.email_field :email
   .field
-    = f.label :body
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :address
+    = f.text_area :address
+  .field
+    = f.label :make_model, "Make and model of current tank (if known)"
+    = f.text_field :make_model
+  .field
+    = f.label :base_type, "Type of Base: (For example: Raised Base, Concrete Base, Slab Base)"
+    = f.text_field :base_type
+  .field
+    = f.label :base_size, "Size of the Supporting Base"
+    = f.text_field :base_size
+  .field
+    = f.label :access, "Is there suitable access to the tank area?"
+    = f.select :access, [['Yes, Yes'], ['No','No']]
+  .field
+    = f.label :tank_capacity, "Capacity of the tank?"
+    = f.text_field :tank_capacity
+  .field
+    = f.label :oil_remaining, "Approximate amount of oil remaining in tank?"
+    = f.text_field :oil_remaining
+  .field
+    = f.label :body, "Comments"
     = f.text_area :body
   .field
     = f.submit 'Send Enquiry'

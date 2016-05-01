@@ -1,0 +1,27 @@
+= form_for(@enquiry) do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :company
+    = f.text_field :company
+  .field
+    = f.label :email
+    = f.email_field :email
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :address
+    = f.text_area :address
+  .field
+    = f.label :postcode
+    = f.text_area :postcode
+  .field
+    = f.label :enquiry_type, "Nature of enquiry?"
+    = f.select :enquiry_type, ['Service', 'Breakdown', 'Replacement']
+  .field
+    = f.label :body, "Comments"
+    = f.text_area :body
+  .field
+    = f.submit 'Send Enquiry'

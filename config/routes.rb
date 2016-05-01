@@ -15,7 +15,12 @@ Rails.application.routes.draw do
 
   resources :services, only: [:index, :show]
   resources :projects, only: [:index, :show]
-  resources :enquiries, only: [:new, :create]
+  resources :enquiries, only: [:new, :create] do
+    collection do
+      get :heating_enquiry
+      get :tank_enquiry
+    end
+  end
   resources :sessions, only: [:new, :create]
 
   namespace :admin do

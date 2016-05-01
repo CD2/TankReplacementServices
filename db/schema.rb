@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160413113103) do
+ActiveRecord::Schema.define(version: 20160501034559) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -33,8 +33,19 @@ ActiveRecord::Schema.define(version: 20160413113103) do
     t.string   "name"
     t.string   "email"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "company"
+    t.string   "phone"
+    t.text     "address"
+    t.string   "make_model"
+    t.string   "base_type"
+    t.string   "base_size"
+    t.string   "access"
+    t.string   "tank_capacity"
+    t.string   "oil_remaining"
+    t.string   "postcode"
+    t.string   "enquiry_type"
   end
 
   create_table "faqs", force: :cascade do |t|
@@ -42,6 +53,22 @@ ActiveRecord::Schema.define(version: 20160413113103) do
     t.text     "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "menu_items", force: :cascade do |t|
+    t.integer  "menu_id"
+    t.string   "name"
+    t.string   "path"
+    t.integer  "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.string   "machine_name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "page_promotions", force: :cascade do |t|

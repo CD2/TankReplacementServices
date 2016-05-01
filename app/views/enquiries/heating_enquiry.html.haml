@@ -1,0 +1,6 @@
+#enquiry_form_page
+  %h1 Heating Service Enquiry
+  %em Please note: We only offer boiler servicing within 25 miles of NR19 2NE
+  %p Please fill out the form below to enquire about our Heating services. One of our team will read it and get back to you to assist.
+  #errors= render 'shared/form_errors', object: @enquiry
+  = render 'heating_form'

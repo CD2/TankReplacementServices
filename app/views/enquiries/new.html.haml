@@ -1,11 +1,39 @@
 - if @page.catchline?
   #page_catchline
     = raw @page.catchline
-#contact_page_container
-  #form_container
-    %h1 Get In Touch
+#page_content
+  #page_content_inner
+    %h1 Contact us today
+    %p
+      Tel: 01362 687144 (Norfolk)
+      %br/
+      Tel: 01206 231555 (Essex)
+    %p
+      Email:
+      = mail_to 'info@tankreplacementservices.co.uk'
+    %p
+      Tank Replacement Services Ltd
+      %br/
+      Church Farm
+      %br/
+      Station Road
+      %br/
+      Wendling
+      %br/
+      Dereham
+      %br/
+      Norfolk
+      %br/
+      NR19 2NE
+    %hr
+    %h2 Tank Enquiry
     #errors= render 'shared/form_errors', object: @enquiry
     = render 'form'
 
+    %hr
+    %h3 Heating Service Enquiry
+    %em Please note: We only offer boiler servicing within 25 miles of NR19 2NE
+    #errors= render 'shared/form_errors', object: @enquiry
+    = render 'heating_form'
 
   = render 'shared/promotions_container', page: @page
