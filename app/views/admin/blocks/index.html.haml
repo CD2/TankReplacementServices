@@ -1,0 +1,17 @@
+%h1 Blocks
+
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th
+  %tbody
+    - @blocks.each do |page|
+      %tr
+        %td
+          = page.title
+        %td
+          = link_to 'edit', [:edit, :admin, page]
+

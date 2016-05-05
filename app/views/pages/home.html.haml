@@ -1,54 +1,31 @@
 = content_for :admin_contextual_links do
-	= link_to 'Edit Page', edit_admin_page_path(@page)
+  = link_to 'Edit Page', edit_admin_page_path(@page)
 #header_image{style: ("background-image: url(#{@page.banner});" if @page.banner?)}
 - if @page.catchline?
-	#page_catchline
-		= raw @page.catchline
+  #page_catchline
+    = raw @page.catchline
 #teasers
-	.teaser
-		%h2 Home Owners
-		%p 
-			Plastic and Steel Oil Tanks
-			%br
-			Professional installation
-			%br
-			Outstanding Customer Service
-		.more_link_container
-			= link_to 'Read More', '#'
-	.teaser
-		%h2 Commercial
-		%p 
-			Latest Plastic Bunded Tanks
-			%br
-			Custom made Steel Tanks
-			%br
-			Nationwide installation
-		.more_link_container
-			= link_to 'Read More', '#'
-	.teaser
-		%h2 Agricultural
-		%p 
-			Custom made Steel Tanks
-			%br
-			FuelMaster Fuel Stations
-			%br
-			Deals for Anglia Farmers.
-		.more_link_container
-			= link_to 'Read More', '#'
+  - Block.all.each do |block|
+    .teaser
+      %h2= block.title
+      = simple_format block.body
+      .more_link_container
+        = link_to 'Read More', block.link_path
+
 
 #page_content
 
-	#page_content_inner.home_content_inner
-		= raw @page.body
+  #page_content_inner.home_content_inner
+    = raw @page.body
 
-		#popular_products_container
-			%ul
-				%li= link_to 'HOME OWNERS - NEW PLASTIC OIL TANKS (open sans 16px semibold)', '#'
-				%li= link_to 'HOME OWNERS - NEW STEEL OIL TANKS', '#'
-				%li= link_to 'COMMERCIAL - NEW PLASTIC BUNDED TANKS', '#'
-				%li= link_to 'COMMERCIAL - CUSTOM MADE STEEL TANKS', '#'
-				%li= link_to 'AGRICULTURAL - CUSTOM MADE STEEL TANKS', '#'
-				%li= link_to 'AGRICULTURAL - FUELMASTER TANKS', '#'
-				%li= link_to 'OIL SECURITY SYSTEMS4REQUEST A FREE QUOTATION', '#'
+    #popular_products_container
+      %ul
+        %li= link_to 'HOME OWNERS - NEW PLASTIC OIL TANKS (open sans 16px semibold)', '#'
+        %li= link_to 'HOME OWNERS - NEW STEEL OIL TANKS', '#'
+        %li= link_to 'COMMERCIAL - NEW PLASTIC BUNDED TANKS', '#'
+        %li= link_to 'COMMERCIAL - CUSTOM MADE STEEL TANKS', '#'
+        %li= link_to 'AGRICULTURAL - CUSTOM MADE STEEL TANKS', '#'
+        %li= link_to 'AGRICULTURAL - FUELMASTER TANKS', '#'
+        %li= link_to 'OIL SECURITY SYSTEMS4REQUEST A FREE QUOTATION', '#'
 
-	= render 'shared/promotions_container', page: @page
+  = render 'shared/promotions_container', page: @page

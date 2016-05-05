@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'projects#index'
-
+    resources :blocks
     resources :services, except: [:show]
     resources :faqs, except: [:show]
     resources :testimonials, except: [:show]
