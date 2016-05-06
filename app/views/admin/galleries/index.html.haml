@@ -1,0 +1,18 @@
+= link_to 'Create New Gallery', [:new, :admin, :gallery], class: 'action_link'
+%h1 Galleries
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th{'colspan' => 2}
+  %tbody
+    - @gallerys.each do |gallery|
+      %tr
+        %td
+          = gallery.name
+        %td
+          = link_to 'edit', [:edit, :admin, gallery]
+        %td
+          = link_to 'delete', [:admin, gallery], method: 'delete', confirm: 'Are you sure?'

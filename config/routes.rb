@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'testimonials' => 'pages#testimonials'
 
   resources :services, only: [:index, :show]
+  resources :galleries, only: [:index, :show]
+
   resources :projects, only: [:index, :show]
   resources :enquiries, only: [:new, :create] do
     collection do
@@ -28,6 +30,7 @@ Rails.application.routes.draw do
     resources :blocks
     resources :services, except: [:show]
     resources :faqs, except: [:show]
+    resources :galleries, except: :show
     resources :testimonials, except: [:show]
     resources :promotion_cards, except: [:show]
     resources :pages, except: [:show]
