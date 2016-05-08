@@ -3,28 +3,8 @@
     = raw @page.catchline
 #page_content
   #page_content_inner
-    %h1 Contact us today
-    %p
-      Tel: 01362 687144 (Norfolk)
-      %br/
-      Tel: 01206 231555 (Essex)
-    %p
-      Email:
-      = mail_to 'info@tankreplacementservices.co.uk'
-    %p
-      Tank Replacement Services Ltd
-      %br/
-      Church Farm
-      %br/
-      Station Road
-      %br/
-      Wendling
-      %br/
-      Dereham
-      %br/
-      Norfolk
-      %br/
-      NR19 2NE
+    %h1= @page.name
+    = raw @page.body
     %hr
     %span= link_to 'Heating Service Enquiry', heating_enquiry_enquiries_path
     %br/
