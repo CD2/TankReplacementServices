@@ -79,7 +79,7 @@ task gen_pages: :environment do
         path: 'contact',
         banner: File.open(File.join(Rails.root, 'seed_images/trs_header_08_contact.jpeg')),
         catchline: 'We welcome all enquiries. Feel free to call us on 01362 687144 or 01206 231555.')
-
+    
 end
 
 

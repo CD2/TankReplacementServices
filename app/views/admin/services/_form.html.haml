@@ -12,5 +12,16 @@
   .field
     = f.label :catchline
     = f.text_field :catchline
+  = f.fields_for :selected_promotions do |pp|
+    .field
+      = pp.label :first, 'Promotion Card 1'
+      = pp.select :first, PromotionCard.pluck(:name, :id), {selected: @service.promotion_cards.first.try(:id), include_blank: true}
+    .field
+      = pp.label :second, 'Promotion Card 2'
+      = pp.select :second, PromotionCard.pluck(:name, :id), {selected: @service.promotion_cards.second.try(:id), include_blank: true}
+    .field
+      = pp.label :third, 'Promotion Card 3'
+      = pp.select :third, PromotionCard.pluck(:name, :id), {selected: @service.promotion_cards.third.try(:id), include_blank: true}
+
   .actions
     = f.submit 'Save'

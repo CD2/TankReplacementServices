@@ -48,7 +48,7 @@ class Admin::ServicesController < AdminController
 	private
 
 	def service_params
-		params.require(:service).permit(:name, :body, :catchline)
+		params.require(:service).permit(:name, :body, :catchline, selected_promotions: [:first, :second, :third])
 	end
 
 	def set_service

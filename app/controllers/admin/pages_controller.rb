@@ -48,7 +48,7 @@ class Admin::PagesController < AdminController
 	private
 
 	def page_params
-		params.require(:page).permit(:name, :path, :body, :banner)
+		params.require(:page).permit(:name, :path, :body, :banner, selected_promotions: [:first, :second, :third])
 	end
 
 	def set_page
