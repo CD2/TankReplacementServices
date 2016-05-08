@@ -6,13 +6,17 @@
     %tr
       %th
         Name
-      %th{'colspan' => 2}
+      %th{'colspan' => 4}
   %tbody
     - @gallerys.each do |gallery|
       %tr
         %td
           = gallery.name
         %td
+          = link_to 'view', gallery
+        %td
           = link_to 'edit', [:edit, :admin, gallery]
         %td
-          = link_to 'delete', [:admin, gallery], method: 'delete', confirm: 'Are you sure?'
+          = link_to 'manage', admin_gallery_gallery_images_path(gallery)
+        %td
+          = link_to 'delete', [:admin, gallery], method: 'delete', data: {confirm: 'Are you sure?'}

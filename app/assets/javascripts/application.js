@@ -21,4 +21,8 @@ $(function() {
 		$('html').toggleClass('responsive_open')
 	})
 
+  $('form.galleryImageUploadForm').find('input[type=file]').on('change', function(){
+    $(this).closest('form').trigger('submit');
+  });
+console.log("(")
 });

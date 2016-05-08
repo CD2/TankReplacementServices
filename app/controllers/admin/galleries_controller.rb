@@ -48,7 +48,7 @@ class Admin::GalleriesController < AdminController
 	private
 
 	def gallery_params
-		params.require(:gallery).permit(:name)
+		params.require(:gallery).permit(:name, :image)
 	end
 
 	def set_gallery

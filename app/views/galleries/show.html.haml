@@ -1,0 +1,8 @@
+= content_for :admin_contextual_links do
+  = link_to 'Manage Gallery', admin_gallery_gallery_images_path(@gallery)
+
+%h1#galleryTitle= @gallery.name
+
+#gallery_container
+  - @gallery.gallery_images.each do |image|
+    = image_tag image.image.main

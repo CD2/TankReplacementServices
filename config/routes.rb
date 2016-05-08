@@ -30,7 +30,9 @@ Rails.application.routes.draw do
     resources :blocks
     resources :services, except: [:show]
     resources :faqs, except: [:show]
-    resources :galleries, except: :show
+    resources :galleries, except: :show do
+      resources :gallery_images, only: [:index, :create, :destroy]
+    end
     resources :testimonials, except: [:show]
     resources :promotion_cards, except: [:show]
     resources :pages, except: [:show]

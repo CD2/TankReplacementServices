@@ -1,0 +1,21 @@
+= form_for [:admin, @gallery, GalleryImage.new], html:{class: 'galleryImageUploadForm action_form'} do |f|
+  .field
+    = f.label :image, 'Add Image'
+    = f.file_field :image
+%h1= "Images for #{@gallery.name}"
+
+
+
+%table
+  %thead
+    %tr
+      %th
+        Image
+      %th
+  %tbody
+    - @gallery_images.each do |gallery_image|
+      %tr
+        %td
+          = image_tag gallery_image.image.thumb
+        %td
+          = link_to 'delete', [:admin, @gallery, gallery_image], method: 'delete', confirm: 'Are you sure?'
