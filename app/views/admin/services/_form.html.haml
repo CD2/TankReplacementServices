@@ -1,8 +1,10 @@
 = form_for([:admin, @service]) do |f|
 
   .field
-    = f.label :banner
-    = f.file_field :banner
+    = field_set_tag 'banner' do
+      - unless @service.new_record? || @service.banner.blank?
+        = image_tag(@service.banner)
+      = f.file_field :banner
   .field
     = f.label :name
     = f.text_field :name 

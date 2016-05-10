@@ -14,7 +14,7 @@ class Admin::ServicesController < AdminController
 		@service = Service.new(service_params)
 		if @service.save
 			flash[:success] = 'Service Created'
-			redirect_to [:admin, :services]
+			redirect_to @service
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ class Admin::ServicesController < AdminController
 		@service.update_attributes(service_params)
 		if @service.save
 			flash[:success] = 'Service Updated'
-			redirect_to [:admin, :services]
+			redirect_to @service
 		else
 			flash[:error] = 'Sorry, an error occured'
 			render :edit
@@ -48,7 +48,7 @@ class Admin::ServicesController < AdminController
 	private
 
 	def service_params
-		params.require(:service).permit(:name, :body, :catchline, selected_promotions: [:first, :second, :third])
+		params.require(:service).permit(:name, :body, :catchline, :banner, selected_promotions: [:first, :second, :third])
 	end
 
 	def set_service

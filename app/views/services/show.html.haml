@@ -1,7 +1,8 @@
 - provide :title, @service.name
-
+= content_for :admin_contextual_links do
+  = link_to 'Edit Page', edit_admin_service_path(@page)
 - unless @service.banner.blank?
-  = image_tag @service.banner, class: 'service_banner'
+  = image_tag @service.banner.banner, class: 'service_banner'
 - if @service.catchline?
   #page_catchline
     = raw @service.catchline

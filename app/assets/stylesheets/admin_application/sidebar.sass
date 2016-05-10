@@ -1,32 +1,34 @@
 #sidebar
-	+flexbox
-	+flex-direction(column)
-	+flex-shrink(0)
-	width: $admin_sidebar_width
-	background: $dark_grey
+  +flexbox
+  +flex-direction(column)
+  +flex-shrink(0)
+  width: $admin_sidebar_width
+  background: $dark_grey
 
-	#logo
-		font-size: 1.5em
-		font-weight: bold
-		text-align: center
-		background: white
-		color: black
+  #logo
+    font-size: 1.5em
+    font-weight: bold
+    text-align: center
+    background: white
+    color: black
 
-		img
-			height: inherit
+    img
+      height: inherit
+      width: 125px
+      margin: 10px 0
 
-	>a
-		color: white
-		height: $admin_sidebar_item_height
-		text-align: center
-		line-height: $admin_sidebar_item_height
-		border-bottom: 1px solid $dark-grey
-		text-decoration: none
-		display: block
+  >a
+    color: white
+    height: $admin_sidebar_item_height
+    text-align: center
+    line-height: $admin_sidebar_item_height
+    border-bottom: 1px solid $dark-grey
+    text-decoration: none
+    display: block
 
-		&:hover
-			background: $grey
-			text-decoration: underline
+    &:hover
+      background: $grey
+      text-decoration: underline
 
-		&.active
-			background: $grey
+    &.active
+      background: $grey
