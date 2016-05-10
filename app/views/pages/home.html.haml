@@ -8,7 +8,7 @@
   - Block.all.each do |block|
     .teaser
       %h2= block.title
-      = simple_format block.body
+      = raw block.body
       .more_link_container
         = link_to 'Read More', block.link_path
 
