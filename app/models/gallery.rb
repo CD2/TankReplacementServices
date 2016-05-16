@@ -5,4 +5,8 @@ class Gallery < ActiveRecord::Base
 
   validates :name, presence: :true
 
+  def preview_thumbs
+    gallery_images.shuffle.first(3).collect{|x| x.image}
+  end
+
 end

@@ -6,5 +6,6 @@
 
     = link_to gallery do
       .gallery_preview
-        = image_tag gallery.image.main
         %h2= gallery.name
+        - gallery.preview_thumbs.each do |i|
+          = image_tag i
