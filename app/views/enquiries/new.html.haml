@@ -6,8 +6,8 @@
     %h1= @page.name
     = raw @page.body
     %hr
-    %span= link_to 'Heating Service Enquiry', heating_enquiry_enquiries_path
+    %span= link_to 'Heating Service Enquiry', heating_enquiry_enquiries_path, class: 'enq_link'
     %br/
-    %span= link_to 'Oil Tank Enquiry', tank_enquiry_enquiries_path
+    %span= link_to 'Oil Tank Enquiry', tank_enquiry_enquiries_path, class: 'enq_link'
 
   = render 'shared/promotions_container', page: @page
