@@ -48,7 +48,7 @@ class Admin::TestimonialsController < AdminController
 	private
 
 	def testimonial_params
-		params.require(:testimonial).permit(:name, :body)
+		params.require(:testimonial).permit(:name, :body, :date)
 	end
 
 	def set_testimonial
