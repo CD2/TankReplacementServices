@@ -7,6 +7,9 @@
     = f.label :banner
     = f.file_field :banner
   .field
+    = f.label :catchline
+    = f.text_field :catchline
+  .field
     = f.label :body
     = f.cktext_area :body
   = f.fields_for :selected_promotions do |pp|
@@ -22,6 +25,9 @@
       = pp.label :third, 'Promotion Card 3'
       = pp.select :third, PromotionCard.pluck(:name, :id), {selected: @page.promotion_cards.third.try(:id), include_blank: true}
       = pp.hidden_field :order, value: 3
-
+    .field
+      = pp.label :fourth, 'Promotion Card 4'
+      = pp.select :fourth, PromotionCard.pluck(:name, :id), {selected: @page.promotion_cards.fourth.try(:id), include_blank: true}
+      = f.hidden_field :order, value: 4
   .field
     = f.submit 'Save'

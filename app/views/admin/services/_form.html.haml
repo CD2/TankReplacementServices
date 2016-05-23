@@ -27,6 +27,10 @@
       = pp.label :third, 'Promotion Card 3'
       = pp.select :third, PromotionCard.pluck(:name, :id), {selected: @service.promotion_cards.third.try(:id), include_blank: true}
       = f.hidden_field :order, value: 3
+    .field
+      = pp.label :fourth, 'Promotion Card 4'
+      = pp.select :fourth, PromotionCard.pluck(:name, :id), {selected: @service.promotion_cards.fourth.try(:id), include_blank: true}
+      = f.hidden_field :order, value: 4
 
   .actions
     = f.submit 'Save'
