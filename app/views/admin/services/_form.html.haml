@@ -18,12 +18,15 @@
     .field
       = pp.label :first, 'Promotion Card 1'
       = pp.select :first, PromotionCard.pluck(:name, :id), {selected: @service.promotion_cards.first.try(:id), include_blank: true}
+      = f.hidden_field :order, value: 1
     .field
       = pp.label :second, 'Promotion Card 2'
       = pp.select :second, PromotionCard.pluck(:name, :id), {selected: @service.promotion_cards.second.try(:id), include_blank: true}
+      = f.hidden_field :order, value: 2
     .field
       = pp.label :third, 'Promotion Card 3'
       = pp.select :third, PromotionCard.pluck(:name, :id), {selected: @service.promotion_cards.third.try(:id), include_blank: true}
+      = f.hidden_field :order, value: 3
 
   .actions
     = f.submit 'Save'
