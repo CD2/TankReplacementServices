@@ -1,5 +1,5 @@
 class Testimonial < ActiveRecord::Base
 
-  default_scope -> { order created_at: :desc }
+  default_scope -> { order date: :desc }
 
 end
