@@ -21,10 +21,8 @@
       #page_wrapper
         margin: 10px
         .field
-          padding: 20px
+          padding: 20px 0
           color: #333
-          margin: 10px 0
-          border-bottom: 3px solid #ccc
 
           .label
             font-weight: bold
@@ -57,6 +55,10 @@
 
 
     #page_wrapper
+      - if @enquiry.oil?
+        %h2 Oil Tank Enquiry
+      - else
+        %h2 Heating Service Enquiry
       .field
         .label Name
         .content= @enquiry.name
