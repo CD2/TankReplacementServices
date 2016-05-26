@@ -16,6 +16,7 @@ class PagesController < ApplicationController
 
   def show
   	@page = Page.find_by(path: params[:id])
+    redirect_to faqs_path if @page.path == 'faq'
   end
 
 end
