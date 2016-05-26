@@ -48,10 +48,13 @@
           opacity: 0.5
 
   %body
-    #header
-      = image_tag 'logo.jpg'
-      %h1 New Enquiry
-      = link_to 'View on Site', [:admin, @enquiry]
+
+
+
+
+
+
+
 
     #page_wrapper
       .field
@@ -60,8 +63,44 @@
       .field
         .label Email
         .content= @enquiry.email
+
       .field
-        .label Body
+        .label Company
+        .content= @enquiry.company
+      .field
+        .label Phone
+        .content= @enquiry.phone
+      .field
+        .label Address
+        .content= @enquiry.address
+      - if @enquiry.oil?
+        .field
+          .label Make and model of current tank
+          .content= @enquiry.make_model
+        .field
+          .label Type of Base
+          .content= @enquiry.base_type
+        .field
+          .label Size of the Supporting Base
+          .content= @enquiry.base_size
+        .field
+          .label Is there suitable access to the tank area
+          .content= @enquiry.access
+        .field
+          .label Capacity of the tank
+          .content= @enquiry.tank_capacity
+        .field
+          .label Approximate amount of oil remaining in tank
+          .content= @enquiry.oil_remaining
+      - else
+        .field
+          .label Postcode
+          .content= @enquiry.postcode
+        .field
+          .label Nature of Enquiry
+          .content= @enquiry.enquiry_type
+      .field
+        .label Comments
         .content= simple_format @enquiry.body
     #footer
       %span

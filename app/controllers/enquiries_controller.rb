@@ -27,7 +27,7 @@ class EnquiriesController < ApplicationController
 
 	private
 		def enquiry_params
-			params.require(:enquiry).permit(:name, :email, :body)
+			params.require(:enquiry).permit(:name, :email, :body, :form_type, :company, :phone, :address, :make_model, :base_type, :base_size, :access, :tank_capacity, :oil_remaining, :postcode, :enquiry_type)
 		end
 
 end

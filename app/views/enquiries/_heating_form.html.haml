@@ -23,5 +23,6 @@
   .field
     = f.label :body, "Comments"
     = f.text_area :body
+    = f.hidden_field :form_type, value: :heating
   .field
     = f.submit 'Send Enquiry'

@@ -1,5 +1,5 @@
 class EnquiryMailer < ApplicationMailer
-  default from: 'enquiries@tankreplacementservices.co.uk', to: 'info@tankreplacementservices.co.uk'
+  default from: 'enquiries@tankreplacementservices.co.uk', to: 'shane@cd2solutions.co.uk'
 
   def new_enquiry enquiry
     @enquiry = enquiry
