@@ -30,6 +30,9 @@
         %div
           #phone_number_area Essex
           #phone_number 01206 231555
+      #social
+        = link_to image_tag('twit.png'), '#'
+        //= link_to image_tag('fb.png'), 'https://www.facebook.com/Tank-Replacement-Services-LTD-1217497121594586/'
 
   #main_menu
     %span.dropdown
@@ -78,32 +81,44 @@
       %span.menu_spacer
       %span= link_to 'Emergency Help', '/emergency'
       %span.menu_spacer
-      %span= link_to 'Oil Fired Boiler Servicing', '/servicing'
+      %span= link_to 'Heating Service Enquiry', heating_enquiry_enquiries_path
+      %span.menu_spacer
+      %span= link_to 'Oil Tank Enquiry', tank_enquiry_enquiries_path
       %span.menu_spacer
       %span=link_to 'FAQs', '/faqs'
       %span.menu_spacer
-      %span=link_to 'News', '/news'
+      %span=link_to 'Gallery', galleries_path
       %span.menu_spacer
       %span= link_to 'Contact Us', '/contact_us'
     .responsive_main_menu
       %span.dropdown
-        = link_to 'Plastic Oil Tanks', '#'
-        %div
-          %span=link_to 'Domestic Plastic Tanks', '/services/2'
-          %span=link_to 'Commercial Plastic Tanks', '/services/3'
-      %span.menu_spacer
+      = link_to 'Plastic Oil Tanks', '#', class: 'blank_link'
+      %div
+        %span=link_to 'Domestic', '/services/2'
+        %span=link_to 'Commercial', '/services/13'
+
       %span.dropdown
-        =link_to 'Steel Oil Tanks', '#'
+        =link_to 'Steel Oil Tanks', '#', class: 'blank_link'
         %div
-          %span=link_to 'Domestic Steel Tanks', '/services/5'
-          %span=link_to 'Commercial Steel Tanks', '/services/6'
-      %span.menu_spacer
-      %span=link_to 'Fuel Dispensers', '/services/7'
-      %span.menu_spacer
-      %span=link_to 'Oil Security', '/services/8'
-      %span.menu_spacer
-      %span=link_to 'Oil Conditioning', '/services/9'
-      %span.menu_spacer
+          %span=link_to 'Domestic', '/services/5'
+          %span=link_to 'Commercial', '/services/6'
+
       %span=link_to 'Accessories', '/services/11'
-      %span.menu_spacer
       %span=link_to 'Tank Decommission', '/services/12'
+
+      %span.dropdown
+        =link_to 'Oil Tank Installations', '#', class: 'blank_link'
+        %div
+          %span=link_to 'Domestic', '/services/9'
+          %span=link_to 'Commercial', '/services/10'
+      %span.dropdown
+        =link_to 'Fuel Dispensers', '#', class: 'blank_link'
+        %div
+          %span=link_to 'Plastic', '/services/3'
+          %span=link_to 'Steel', '/services/7'
+
+      %span.dropdown
+        =link_to 'Heating Services', '#', class: 'blank_link'
+        %div
+          %span=link_to 'Oil Boiler Servicing and Breakdowns', '/services/14'
+          %span=link_to 'Oil boiler Installations', '/services/16'
