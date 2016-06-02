@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a72a15b7-7186-417f-b3e9-b2317aaf5748" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_header.html.haml" afterPath="$PROJECT_DIR$/app/views/shared/_header.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application/header.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application/header.sass" />
     </list>
     <ignored path="trs_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,23 +91,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_header.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_header.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
-              <folding>
-                <marker date="1464695433000" expanded="true" signature="1056:1161" placeholder="= link_to image_tag('fb.png'), 'https://www.facebook.com/Tank-Replacement-Services-LTD-1217497121594586/'" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.sass" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.sass" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application/header.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1548">
-              <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+            <state relative-caret-position="396">
+              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -200,8 +198,8 @@
         <option value="$PROJECT_DIR$/app/views/enquiries/_heating_form.html.haml" />
         <option value="$PROJECT_DIR$/app/mailers/enquiry_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/enquiry_mailer/new_enquiry.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application/header.sass" />
         <option value="$PROJECT_DIR$/app/views/shared/_header.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application/header.sass" />
       </list>
     </option>
   </component>
@@ -241,6 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -410,7 +409,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -665,12 +663,13 @@
       <workItem from="1464210336615" duration="386000" />
       <workItem from="1464258800947" duration="3594000" />
       <workItem from="1464607166289" duration="1258000" />
-      <workItem from="1464695401504" duration="33000" />
+      <workItem from="1464695401504" duration="161000" />
+      <workItem from="1464862234788" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41335000" />
+    <option name="totallyTimeSpent" value="41490000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,21 +1095,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application/header.sass">
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_header.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1548">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        <state relative-caret-position="18">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_header.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application/header.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
-          <folding>
-            <marker date="1464695433000" expanded="true" signature="1056:1161" placeholder="= link_to image_tag('fb.png'), 'https://www.facebook.com/Tank-Replacement-Services-LTD-1217497121594586/'" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
