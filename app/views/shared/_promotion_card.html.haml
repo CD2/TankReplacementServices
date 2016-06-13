@@ -1,5 +1,5 @@
 .promotion{style: "background:#{promotion_card.try(:background)}"}
-  - if promotion_card.url.blank?
+  - if promotion_card && promotion_card.url.blank?
     = image_tag promotion_card.try(:image)
   - else 
     = link_to image_tag(promotion_card.try(:image)), promotion_card.url
