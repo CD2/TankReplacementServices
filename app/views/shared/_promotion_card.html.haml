@@ -1,6 +1,9 @@
 .promotion{style: "background:#{promotion_card.try(:background)}"}
-	= image_tag promotion_card.try(:image)
-	.promotion_inner
-		%h2= promotion_card.try(:name)
-		%p= promotion_card.try(:body)
-		/= link_to 'More', promotion_card.path if promotion_card.path
+  - if promotion_card && promotion_card.try(:url).blank?
+    = image_tag promotion_card.try(:image)
+  - else 
+    = link_to image_tag(promotion_card.try(:image)), promotion_card.try(:url)
+  .promotion_inner
+    %h2= promotion_card.try(:name)
+    %p= promotion_card.try(:body)
+/= link_to 'More', promotion_card.path if promotion_card.path
