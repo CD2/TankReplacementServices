@@ -18,4 +18,16 @@
       #page_container_inner
         = render 'shared/header'
         = yield
-        = render 'shared/footer'
+        #footer_container
+          #logo_panel
+            = link_to image_tag('optec.jpg', class: 'optec'), 'http://www.oftec.org.uk/Consumers/Technician?id=1839&BranchId=0%20&distance=0'
+            = image_tag 'footer_block.jpg', class: 'footer_image'
+          #footer_catchline
+            #footer_catchline_content
+              Tank Replacement Services Ltd, Church Farm, Station Road, Wendling,  Dereham, Norfolk, 
+              %span NR19 2NE
+            = link_to 'Email: info@tankreplacementservices.co.uk', 'mailto:info@tankreplacementservices.co.uk'
+          #footer_info
+            #company_info
+              © Copyright 2016, Tank Replacement Services Ltd.
+

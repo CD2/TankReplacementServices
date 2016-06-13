@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526105739) do
+ActiveRecord::Schema.define(version: 20160613114009) do
 
   create_table "blocks", force: :cascade do |t|
     t.string   "title"
@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(version: 20160526105739) do
     t.string   "background"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "url"
   end
 
   create_table "services", force: :cascade do |t|
