@@ -1,50 +1,51 @@
 #footer_container
-	color: $primary_color
-	clear: both
-	@media screen and (min-width: 500px)
-		margin-top: 40px
+  color: $primary_color
+  clear: both
+  @media screen and (min-width: 500px)
+    margin-top: 40px
 
-	#logo_panel
-		border-top: 1px solid $primary_color
-		border-bottom: 1px solid $primary_color
-		font-size: 0
+  #logo_panel
+    border-top: 1px solid $primary_color
+    border-bottom: 1px solid $primary_color
+    font-size: 0
+    text-align: center
 
-		img 
-			display: inline-block
-		.optec
-			width: 10%
-		.footer_image
-			width: 90%
+    img
+      display: inline-block
+    .optec
+      width: 10%
+    .footer_image
+      width: 90%
 
-	#footer_catchline 
-		background: $secondary_color
-		padding: 15px
-		+flexbox
-		+justify-content(space-between)
+  #footer_catchline
+    background: $secondary_color
+    padding: 15px
+    +flexbox
+    +justify-content(space-between)
 
-		span
-			white-space: nowrap
+    span
+      white-space: nowrap
 
 
-		a
-			text-align: right
-			+flex-shrink(0)
-		@media screen and (max-width: 900px)
-			#footer_catchline_content
-				width: 500px
+    a
+      text-align: right
+      +flex-shrink(0)
+    @media screen and (max-width: 900px)
+      #footer_catchline_content
+        width: 500px
 
-		@media screen and (max-width: 620px)
-			#footer_catchline_content
-				text-align: center
-			a
-				display: none
+    @media screen and (max-width: 620px)
+      #footer_catchline_content
+        text-align: center
+      a
+        display: none
 
-	#footer_info
-		font-size: 0.625em
-		padding: 15px
-		line-height: 1.25em
-		height: 50px
+  #footer_info
+    font-size: 0.625em
+    padding: 15px
+    line-height: 1.25em
+    height: 50px
 
-		#design_info
-			float: right
-			text-align: right
+    #design_info
+      float: right
+      text-align: right
