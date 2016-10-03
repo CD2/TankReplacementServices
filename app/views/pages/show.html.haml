@@ -1,6 +1,6 @@
 - provide :title, @page.name
 = content_for :admin_contextual_links do
-  = link_to 'Edit Page', edit_admin_page_path(@page)
+  = link_to 'Edit Page', edit_admin_page_path(@page) 
 
 
 #header_image{style: ("background-image: url(#{@page.banner});" if @page.banner?)}
