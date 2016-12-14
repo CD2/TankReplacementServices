@@ -1,6 +1,8 @@
 = content_for :admin_contextual_links do
-  = link_to 'Edit Page', edit_admin_page_path(@page)
-#header_image{style: ("background-image: url(#{@page.banner});" if @page.banner?)}
+  = link_to 'Edit Page', edit_admin_page_path(@page) rescue nil
+#header_image.no_ban
+  = image_tag @page.banner
+
 - if @page.catchline?
   #page_catchline
     = raw @page.catchline
